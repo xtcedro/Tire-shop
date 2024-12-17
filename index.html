@@ -6,59 +6,7 @@
     <meta name="description" content="Tito's Tire Shop - New and used tires, tire repairs, wheel balancing, and brake services in Oklahoma City.">
     <title>Home - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* Modal styling */
-        .modal {
-            display: flex;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
 
-        .modal-content {
-            background-color: #FF6600;
-            color: #FFFFFF;
-            padding: 2rem;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            max-width: 400px;
-            width: 90%;
-            font-size: 1.2rem;
-        }
-
-        .modal-content button {
-            background-color: #252F34;
-            color: #FFFFFF;
-            padding: 1rem;
-            margin: 1rem;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .modal-content button:hover {
-            background-color: #1F2A2E;
-        }
-
-        /* Hide main content until language is selected */
-        body.hidden {
-            overflow: hidden;
-        }
-
-        .hidden-content {
-            display: none;
-        }
-    </style>
-    <script>
         function setLanguage(lang) {
             if (lang === 'es') {
                 window.location.href = 'index_es.html'; // Redirect to Spanish version
@@ -71,15 +19,20 @@
     </script>
 </head>
 <body class="hidden">
-    <!-- Language Selection Modal -->
-    <div id="language-modal" class="modal">
-        <div class="modal-content">
-            <h2>Welcome to Tito's Tire Shop</h2>
-            <p>Please choose your preferred language:</p>
-            <button onclick="setLanguage('en')">English</button>
-            <button onclick="setLanguage('es')">Español</button>
+  <!-- Language Selection Modal -->
+<div id="language-modal" class="modal">
+    <div class="modal-content">
+        <h2>Language</h2>
+        <div class="language-options">
+            <button onclick="setLanguage('en')">
+                <img src="us-flag.png" alt="English" class="flag-icon"> English
+            </button>
+            <button onclick="setLanguage('es')">
+                <img src="mx-flag.png" alt="Español" class="flag-icon"> Español
+            </button>
         </div>
     </div>
+</div>
 
     <!-- Main Content (Hidden Initially) -->
     <div id="main-content" class="hidden-content">
