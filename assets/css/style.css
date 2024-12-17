@@ -10,53 +10,52 @@ body {
 
 /* Header styling */
 header {
-    background: linear-gradient(to right, #232E32, #1F2A2E);  /* Gradient background */
-    padding: 1rem;
+    background-color: #212C30;  /* Dark grayish background */
+    padding: 1.5rem;
     text-align: center;
     color: #FFFFFF;
     font-size: 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* Navigation bar styling */
 nav {
-    background-color: #252F34;
-    padding: 0.5rem;
+    background-color: #252F34;  /* Slightly lighter gray-blue */
+    padding: 0.75rem;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
-    color: #D0D3D4;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
     display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
     font-weight: bold;
-    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: #1F2A2E;
-    color: #37A7E0;
+    background-color: #FF6600;  /* Orange highlight */
+    color: #FFFFFF;
     border-radius: 5px;
 }
 
 /* Main content styling */
 main {
-    background-color: #0C1011;
+    background-color: #0C1011;  /* Darker gray */
     padding: 2rem;
     color: #FFFFFF;
-    font-size: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     margin: 2rem;
     border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Section styling */
 section {
-    background-color: #212C30;
+    background-color: #FF6600;  /* Bold orange for emphasis */
+    color: #FFFFFF;
     margin: 1rem 0;
     padding: 1.5rem;
     border-radius: 10px;
@@ -83,29 +82,28 @@ button {
 }
 
 button:hover {
-    background-color: #1F2A2E;
+    background-color: #FF6600;  /* Orange button hover effect */
     transform: scale(1.05);
 }
 
 /* Footer styling */
 footer {
-    background: linear-gradient(to right, #1A2527, #0C1011);
+    background-color: #1A2527;  /* Footer background */
     color: #D0D3D4;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
     font-size: 0.9rem;
 }
 
 /* Link styling */
 a {
-    color: #37A7E0;
+    color: #FF6600;  /* Orange links */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #50C0FF;
+    color: #FFFFFF;
     text-decoration: underline;
 }
 
@@ -113,17 +111,16 @@ a:hover {
 @media (max-width: 768px) {
     header {
         font-size: 1.5rem;
-        padding: 0.75rem;
+        padding: 1rem;
     }
 
     nav {
         display: flex;
         flex-direction: column;
-        padding: 0.5rem;
     }
 
     nav a {
-        padding: 0.75rem;
+        padding: 1rem;
         width: 100%;
         box-sizing: border-box;
     }
@@ -141,4 +138,5 @@ a:hover {
     footer {
         font-size: 0.8rem;
     }
-  }
+}
+
