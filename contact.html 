@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function toggleMenu() {
-            document.querySelector('.mobile-menu').classList.toggle('show');
+            const menu = document.querySelector('.mobile-menu');
+            if (menu) {
+                menu.classList.toggle('show');
+            }
         }
     </script>
 </head>
 <body>
     <header>
         <h1>Tito's Tire Shop</h1>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="hamburger" onclick="toggleMenu()" role="button" aria-label="Open mobile menu">&#9776;</div>
     </header>
 
-    <div class="mobile-menu">
+    <nav class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
@@ -26,10 +29,10 @@
         <a href="tire-recommendation.html">Tito's TreadMatch OKC</a>
         <a href="appointments.html">Appointments</a>
         <a href="offers.html">Special Offers</a>
-        <a href="contact.html">Contact</a>
-    </div>
+        <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
 
-    <nav>
+    <nav class="desktop-menu">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
@@ -37,7 +40,7 @@
         <a href="tire-recommendation.html">Tito's TreadMatch OKC</a>
         <a href="appointments.html">Appointments</a>
         <a href="offers.html">Special Offers</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" aria-current="page">Contact</a>
     </nav>
 
     <div class="title-section">
@@ -46,7 +49,7 @@
 
     <main>
         <section>
-            <h2>Get in Touch</h2>
+            <h3>Get in Touch</h3>
             <form action="submit_contact.php" method="POST">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
