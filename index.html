@@ -1,70 +1,152 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Tito's Tire Shop</title>
+    <meta name="description" content="Tito's Tire Shop - New and used tires, tire repairs, wheel balancing, and brake services in Oklahoma City.">
+    <title>Home - Tito's Tire Shop</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modal styling */
+        .modal {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #FF6600;
+            color: #FFFFFF;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
+            font-size: 1.2rem;
+        }
+
+        .modal-content button {
+            background-color: #252F34;
+            color: #FFFFFF;
+            padding: 1rem;
+            margin: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .modal-content button:hover {
+            background-color: #1F2A2E;
+        }
+
+        /* Hide main content until language is selected */
+        body.hidden {
+            overflow: hidden;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+    </style>
     <script>
-        // Toggle mobile menu
-        function toggleMenu() {
-            document.querySelector('.mobile-menu').classList.toggle('show');
+        function setLanguage(lang) {
+            if (lang === 'es') {
+                window.location.href = 'index_es.html'; // Redirect to Spanish version
+            } else {
+                document.getElementById('language-modal').style.display = 'none';
+                document.body.classList.remove('hidden');
+                document.getElementById('main-content').classList.remove('hidden-content');
+            }
         }
     </script>
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <h1>Tito's Tire Shop</h1>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="products.html">Products</a>
-        <a href="tire-recommendation.html">Tire Recommendation</a>
-        <a href="appointments.html">Appointments</a>
-        <a href="offers.html">Special Offers</a>
-        <a href="contact.html">Contact</a>
+<body class="hidden">
+    <!-- Language Selection Modal -->
+    <div id="language-modal" class="modal">
+        <div class="modal-content">
+            <h2>Welcome to Tito's Tire Shop</h2>
+            <p>Please choose your preferred language:</p>
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('es')">Español</button>
+        </div>
     </div>
 
-    <!-- Desktop Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="products.html">Products</a>
-        <a href="tire-recommendation.html">Tire Recommendation</a>
-        <a href="appointments.html">Appointments</a>
-        <a href="offers.html">Special Offers</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content" class="hidden-content">
+        <!-- Header Section -->
+        <header>
+            <h1>Tito's Tire Shop</h1>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </header>
 
-    <!-- Section Title -->
-    <div class="title-section">
-        <h2>About Us</h2>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Products</a>
+            <a href="tire-recommendation.html">Tito's TreadMatch OKC</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="offers.html">Special Offers</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Products</a>
+            <a href="tire-recommendation.html">Tito's TreadMatch OKC</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="offers.html">Special Offers</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Section Title -->
+        <div class="title-section">
+            <h2>Home</h2>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <section>
+                <h2>Our Services</h2>
+                <p>We offer a full range of tire services, including:</p>
+                <ul>
+                    <li>New and Used Tire Sales</li>
+                    <li>Tire Installation</li>
+                    <li>Wheel Balancing & Alignment</li>
+                    <li>Tire Rotation & Repairs</li>
+                    <li>Brake Services</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Find the Perfect Tires for Your Vehicle</h2>
+                <p>Use our interactive tire recommendation tool to find the best tires based on your vehicle type, driving style, and budget.</p>
+                <a href="tire-recommendation.html">
+                    <button>Tito's TreadMatch OKC</button>
+                </a>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Tito's Tire Shop. All rights reserved.</p>
+            <p>Serving you in English and Spanish | <a href="contact.html">Contact Us</a></p>
+        </footer>
     </div>
-
-    <!-- Main Content -->
-    <main>
-        <section>
-            <h3>Our Story</h3>
-            <p>Welcome to Tito's Tire Shop! We have been serving Oklahoma City with reliable tire services for years. Whether you need new or used tires, installations, or repairs, we're here to help.</p>
-        </section>
-
-        <section>
-            <h3>Our Mission</h3>
-            <p>We are committed to providing top-quality service at affordable prices, ensuring safety and satisfaction for every customer.</p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Tito's Tire Shop. All rights reserved.</p>
-        <p>Serving you in English and Spanish | <a href="contact.html">Contact Us</a></p>
-    </footer>
 </body>
 </html>
+
