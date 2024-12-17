@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ponte en contacto con Tito's Tire Shop para consultas, citas y atención al cliente.">
+    <title>Contacto - Tito's Tire Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Función para mostrar/ocultar el menú móvil
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <!-- Sección del Encabezado -->
+    <header>
+        <h1>Tito's Tire Shop</h1>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <!-- Menú Móvil -->
+    <div class="mobile-menu">
+        <a href="index_es.html">Inicio</a>
+        <a href="about_es.html">Sobre Nosotros</a>
+        <a href="services_es.html">Servicios</a>
+        <a href="products_es.html">Productos</a>
+        <a href="tire-recommendation_es.html">Tito's TreadMatch OKC</a>
+        <a href="appointments_es.html">Citas</a>
+        <a href="offers_es.html">Ofertas Especiales</a>
+        <a href="contact_es.html">Contacto</a>
+    </div>
+
+    <!-- Navegación de Escritorio -->
+    <nav>
+        <a href="index_es.html">Inicio</a>
+        <a href="about_es.html">Sobre Nosotros</a>
+        <a href="services_es.html">Servicios</a>
+        <a href="products_es.html">Productos</a>
+        <a href="tire-recommendation_es.html">Tito's TreadMatch OKC</a>
+        <a href="appointments_es.html">Citas</a>
+        <a href="offers_es.html">Ofertas Especiales</a>
+        <a href="contact_es.html">Contacto</a>
+    </nav>
+
+    <!-- Título de la Sección -->
+    <div class="title-section">
+        <h2>Contacto</h2>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section>
+            <h2>Ponte en Contacto</h2>
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Tu Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Información de Contacto</h2>
+            <p><strong>Teléfono:</strong> <a href="tel:+14051234567">(405) 123-4567</a></p>
+            <p><strong>Correo Electrónico:</strong> <a href="mailto:info@titostireshop.com">info@titostireshop.com</a></p>
+            <p><strong>Dirección:</strong> 123 Main Street, Oklahoma City, OK 73102</p>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Tito's Tire Shop. Todos los derechos reservados.</p>
+        <p>Atendemos en inglés y español | <a href="contact_es.html">Contáctanos</a></p>
+    </footer>
+</body>
+</html>
