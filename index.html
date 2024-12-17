@@ -3,17 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tito's Tire Shop - New and used tires, tire repairs, wheel balancing, and brake services in Oklahoma City.">
-    <title>Tito's Tire Shop</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>About Us - Tito's Tire Shop</title>
+    <link rel="stylesheet" href="style.css">
     <script>
-        // Language switcher function
-        function switchLanguage(lang) {
-            if (lang === 'es') {
-                window.location.href = 'index_es.html'; // Redirect to Spanish version
-            } else {
-                window.location.href = 'index.html';    // Redirect to English version
-            }
+        // Toggle mobile menu
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('show');
         }
     </script>
 </head>
@@ -21,19 +16,22 @@
     <!-- Header Section -->
     <header>
         <h1>Tito's Tire Shop</h1>
-        <p>Your Trusted Tire Shop in Oklahoma City</p>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </header>
 
-        <!-- Language Selector -->
-        <div style="margin-top: 10px;">
-            <label for="language-select">Choose Language:</label>
-            <select id="language-select" onchange="switchLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="es">Español</option>
-            </select>
-        </div>
-    </header
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="tire-recommendation.html">Tire Recommendation</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="offers.html">Special Offers</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-    <!-- Navigation Bar -->
+    <!-- Desktop Navigation -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -41,43 +39,25 @@
         <a href="products.html">Products</a>
         <a href="tire-recommendation.html">Tire Recommendation</a>
         <a href="appointments.html">Appointments</a>
+        <a href="offers.html">Special Offers</a>
         <a href="contact.html">Contact</a>
     </nav>
 
+    <!-- Section Title -->
+    <div class="title-section">
+        <h2>About Us</h2>
+    </div>
+
     <!-- Main Content -->
     <main>
-        <!-- Services Section -->
         <section>
-            <h2>Our Services</h2>
-            <p>We offer a full range of tire services, including:</p>
-            <ul>
-                <li>New and Used Tire Sales</li>
-                <li>Tire Installation</li>
-                <li>Wheel Balancing & Alignment</li>
-                <li>Tire Rotation & Repairs</li>
-                <li>Brake Services</li>
-            </ul>
+            <h3>Our Story</h3>
+            <p>Welcome to Tito's Tire Shop! We have been serving Oklahoma City with reliable tire services for years. Whether you need new or used tires, installations, or repairs, we're here to help.</p>
         </section>
 
-        <!-- Killer Feature Section -->
         <section>
-            <h2>Find the Perfect Tires for Your Vehicle</h2>
-            <p>Use our interactive tire recommendation tool, "Tito's TreadMatch OKC" to find the best tires based on your vehicle type, driving style, and budget.</p>
-            <a href="tire-recommendation.html">
-                <button>Try Tito's TreadMatch OKC</button>
-            </a>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section>
-            <h2>Customer Testimonials</h2>
-            <p>Here's what our satisfied customers are saying:</p>
-            <blockquote>
-                "Excellent service and affordable prices! Tito's Tire Shop is my go-to place for all tire needs." – Maria G.
-            </blockquote>
-            <blockquote>
-                "Friendly staff and quick service. Highly recommend!" – John S.
-            </blockquote>
+            <h3>Our Mission</h3>
+            <p>We are committed to providing top-quality service at affordable prices, ensuring safety and satisfaction for every customer.</p>
         </section>
     </main>
 
