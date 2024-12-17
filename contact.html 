@@ -6,14 +6,7 @@
     <meta name="description" content="Get in touch with Tito's Tire Shop for inquiries, appointments, and customer support.">
     <title>Contact Us - Tito's Tire Shop</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.mobile-menu');
-            if (menu) {
-                menu.classList.toggle('show');
-            }
-        }
-    </script>
+  
 </head>
 <body>
     <header>
