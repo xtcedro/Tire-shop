@@ -351,3 +351,12 @@ form .success-message {
     margin: 0 auto;         /* Centering horizontally */
     padding-top: 20px;      /* Add space above the image if needed */
 }
+
+
+.hidden {
+    overflow: hidden;
+}
+
+.hidden-content {
+    display: none;
+}
