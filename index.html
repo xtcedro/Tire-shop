@@ -11,34 +11,21 @@
 </head>
 <body class="hidden">
 
-<div id="language-modal class="modal">
-    <div class="modal-content">
-         <h2>Language</h2>
-      <div class="language-options">
-    <button onclick="setLanguage('en')">English</button>
-  <img src="assets/images/us-flag.png" alt="English" class="flag-icon"> English
-    <button onclick="setLanguage('es')">Español</button>
-    <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon"> Español
-</div>
-
-<div id="main-content" class="hidden-content">
-    <!-- Main site content here -->
-</div>
-  <!-- Language Selection Modal -->
 <div id="language-modal" class="modal">
     <div class="modal-content">
         <h2>Language</h2>
-      
-            <button onclick="setLanguage('en')">
-              
-            </button>
-            <button onclick="setLanguage('es')">
-            
-            </button>
+        <div class="language-options">
+            <div class="option">
+                <button onclick="setLanguage('en')">English</button>
+                <img src="assets/images/us-flag.png" alt="English" class="flag-icon">
+            </div>
+            <div class="language-option">
+                <button onclick="setLanguage('es')">Español</button>
+                <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon">
+            </div>
         </div>
     </div>
 </div>
-
     <!-- Main Content (Hidden Initially) -->
     <div id="main-content" class="hidden-content">
         <!-- Header Section -->
