@@ -6,39 +6,9 @@
     <meta name="description" content="Tito's Tire Shop - Venta de llantas nuevas y usadas, reparaciones de llantas, balanceo de ruedas y servicios de frenos en Oklahoma City.">
     <title>Inicio - Tito's Tire Shop</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        // Función para mostrar/ocultar el menú móvil
-        function toggleMenu() {
-            document.querySelector('.mobile-menu').classList.toggle('show');
-        }
-
-        // Función para establecer el idioma
-        function setLanguage(lang) {
-            if (lang === 'en') {
-                window.location.href = 'index.html'; // Redirige a la versión en inglés
-            } else {
-                document.getElementById('language-modal').style.display = 'none';
-                document.body.classList.remove('hidden');
-                document.getElementById('main-content').classList.remove('hidden-content');
-            }
-        }
-    </script>
+   
 </head>
 <body class="hidden">
-    <!-- Modal de Selección de Idioma -->
-    <div id="language-modal" class="modal">
-        <div class="modal-content">
-            <h2>Language</h2>
-            <div class="language-options">
-                <button onclick="setLanguage('en')">
-                    <img src="assets/images/us-flag.png" alt="English" class="flag-icon"> English
-                </button>
-                <button onclick="setLanguage('es')">
-                    <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon"> Español
-                </button>
-            </div>
-        </div>
-    </div>
 
     <!-- Contenido Principal (Oculto inicialmente) -->
     <div id="main-content" class="hidden-content">
@@ -47,6 +17,21 @@
             <h1>Tito's Tire Shop</h1>
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         </header>
+<div id="language-modal" class="modal">
+    <div class="modal-content">
+        <h2>Language</h2>
+        <div class="language-options">
+            <div class="option">
+                <button onclick="setLanguage('en')">English</button>
+                <img src="assets/images/us-flag.png" alt="English" class="flag-icon">
+            </div>
+            <div class="language-option">
+                <button onclick="setLanguage('es')">Español</button>
+                <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon">
+            </div>
+        </div>
+    </div>
+</div>
 
         <!-- Menú Móvil -->
         <div class="mobile-menu">
