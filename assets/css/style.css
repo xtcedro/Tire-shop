@@ -352,11 +352,3 @@ form .success-message {
     padding-top: 20px;      /* Add space above the image if needed */
 }
 
-
-.hidden {
-    overflow: hidden;
-}
-
-.hidden-content {
-    display: none;
-}
