@@ -3,79 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conoce más sobre Tito's Tire Shop - Nuestra historia, misión y compromiso con la comunidad de Oklahoma City.">
+    <meta name="description" content="Conozca más sobre Tito's Tire Shop, ubicado en Oklahoma City, proporcionando servicios y reparaciones de llantas confiables y asequibles para mantenerlo en la carretera.">
     <title>Sobre Nosotros - Tito's Tire Shop</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        // Función para mostrar/ocultar el menú móvil
-        function toggleMenu() {
-            document.querySelector('.mobile-menu').classList.toggle('show');
-        }
-    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <!-- Sección del Encabezado -->
+    <!-- Header Section -->
     <header>
-        <h1>Tito's Tire Shop</h1>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <h1 class="header-title">Tito's Tire Shop</h1>
+        <div class="title-banner">
+            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop - Oklahoma City">
+        </div>
     </header>
 
-    <!-- Menú Móvil -->
-    <div class="mobile-menu">
+    <!-- Desktop Navigation -->
+    <div class="desktop-nav">
         <a href="index_es.html">Inicio</a>
-        <a href="about_es.html">Sobre Nosotros</a>
+        <a href="about_es.html" class="active">Sobre Nosotros</a>
         <a href="services_es.html">Servicios</a>
         <a href="products_es.html">Productos</a>
-        <a href="tire-recommendation_es.html">Tito's TreadMatch OKC</a>
+        <a href="tire-recommendation_es.html">TreadMatch OKC</a>
         <a href="appointments_es.html">Citas</a>
-        <a href="offers_es.html">Ofertas Especiales</a>
-        <a href="contact_es.html">Contacto</a>
+        <a href="contact_es.html">Contáctanos</a>
     </div>
 
-    <!-- Navegación de Escritorio -->
-    <nav>
-        <a href="index_es.html">Inicio</a>
-        <a href="about_es.html">Sobre Nosotros</a>
-        <a href="services_es.html">Servicios</a>
-        <a href="products_es.html">Productos</a>
-        <a href="tire-recommendation_es.html">Tito's TreadMatch OKC</a>
-        <a href="appointments_es.html">Citas</a>
-        <a href="offers_es.html">Ofertas Especiales</a>
-        <a href="contact_es.html">Contacto</a>
-    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Sobre Tito's Tire Shop</h1>
+        <p class="hero-subtitle">Tu Taller de Llantas de Confianza en Oklahoma City</p>
+    </section>
 
-    <!-- Título de la Sección -->
-    <div class="title-section">
-        <h2>Sobre Nosotros</h2>
-    </div>
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>Nuestra Misión</h2>
+        <p>
+            En <strong>Tito's Tire Shop</strong>, nuestra misión es proporcionar servicios de llantas confiables y asequibles a la 
+            comunidad de Oklahoma City. Desde instalaciones y reparaciones de llantas hasta balanceo de ruedas y servicios de frenos, 
+            estamos comprometidos a mantenerlo seguro en la carretera con soluciones de alta calidad y un excelente servicio al cliente.
+        </p>
+    </section>
 
-    <!-- Contenido Principal -->
-    <main>
-        <section>
-            <h2>Nuestra Historia</h2>
-            <p>¡Bienvenido a Tito's Tire Shop! Hemos servido orgullosamente a la comunidad de Oklahoma City durante muchos años, ofreciendo servicios de llantas de alta calidad y atención al cliente excepcional. Ya sea que necesites llantas nuevas o usadas, instalaciones, reparaciones o servicios de frenos, nuestro equipo está aquí para ayudarte.</p>
-        </section>
+    <!-- Vision Section -->
+    <section class="about-section">
+        <h2>Nuestra Visión</h2>
+        <p>
+            Imaginamos convertirnos en el taller de llantas preferido en Oklahoma City, reconocido por nuestra experiencia, 
+            precios accesibles y características innovadoras como <strong>Tito's TreadMatch OKC</strong>. Al priorizar la satisfacción y la seguridad del cliente, 
+            nuestro objetivo es construir relaciones duraderas con nuestros clientes y la comunidad.
+        </p>
+    </section>
 
-        <section>
-            <h2>Nuestra Misión</h2>
-            <p>En Tito's Tire Shop, nuestra misión es proporcionar servicios de llantas rápidos, accesibles y confiables para mantenerte seguro en el camino. Creemos en la honestidad, calidad y un excelente servicio.</p>
-        </section>
-
-        <section>
-            <h2>¿Por Qué Elegirnos?</h2>
-            <ul>
-                <li>Amplia selección de llantas nuevas y usadas.</li>
-                <li>Precios accesibles para reparaciones y servicios.</li>
-                <li>Atención bilingüe en inglés y español.</li>
-                <li>Personal amable y con experiencia.</li>
-            </ul>
-        </section>
-    </main>
-
-    <!-- Pie de Página -->
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Tito's Tire Shop. Todos los derechos reservados.</p>
-        <p>Atendemos en inglés y español | <a href="contact_es.html">Contáctanos</a></p>
+        <p>
+            <strong>Dirección:</strong> 1305 Northwest 30th Street, Oklahoma City, OK 73118 <br>
+            <strong>Horario:</strong> Lun-Vie: 9 AM - 7 PM, Sáb: 9 AM - 6 PM
+        </p>
+        <ul class="legal-links">
+            <li><a href="terms_es.html">Términos y Condiciones</a></li>
+            <li><a href="privacy_es.html">Política de Privacidad</a></li>
+            <li><a href="disclaimer_es.html">Aviso Legal</a></li>
+            <li><a href="warranty_es.html">Política de Garantía</a></li>
+            <li><a href="refund_es.html">Política de Reembolso</a></li>
+            <li><a href="accessibility_es.html">Declaración de Accesibilidad</a></li>
+            <li><a href="cookies_es.html">Política de Cookies</a></li>
+        </ul>
     </footer>
 </body>
 </html>
