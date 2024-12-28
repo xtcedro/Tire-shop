@@ -3,85 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore new and used tires available at Tito's Tire Shop in Oklahoma City.">
+    <meta name="description" content="Explore the range of tires and accessories offered by Tito's Tire Shop, including new and used tires, rims, and tire repair kits in Oklahoma City.">
     <title>Products - Tito's Tire Shop</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        // Toggle mobile menu
-        function toggleMenu() {
-            document.querySelector('.mobile-menu').classList.toggle('show');
-        }
-    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Tito's Tire Shop</h1>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <h1 class="header-title">Tito's Tire Shop</h1>
+        <div class="title-banner">
+            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop - Oklahoma City">
+        </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="products.html">Products</a>
-        <a href="tire-recommendation.html">Tito's TreadMatch OKC</a>
-        <a href="appointments.html">Appointments</a>
-        <a href="offers.html">Special Offers</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
     <!-- Desktop Navigation -->
-    <nav>
+    <div class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
-        <a href="products.html">Products</a>
+        <a href="products.html" class="active">Products</a>
         <a href="tire-recommendation.html">Tito's TreadMatch OKC</a>
         <a href="appointments.html">Appointments</a>
-        <a href="offers.html">Special Offers</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <!-- Section Title -->
-    <div class="title-section">
-        <h2>Our Products</h2>
+        <a href="contact.html">Contact Us</a>
     </div>
 
-    <!-- Main Content -->
-    <main>
-        <section>
-            <h2>New Tires</h2>
-            <p>Discover our wide range of new tires from top brands, available in various sizes to fit your vehicle perfectly.</p>
-        </section>
+    <!-- Hero Section -->
+    <section class="offers-section">
+        <h1 class="offers-title">Our Products</h1>
+        <p class="offers-description">Quality tires, rims, and accessories for all your driving needs.</p>
+    </section>
 
-        <section>
-            <h2>Used Tires</h2>
-            <p>We offer high-quality used tires at affordable prices. All used tires are inspected to ensure safety and performance.</p>
-        </section>
+    <!-- Products Section -->
+    <section class="offers-section">
+        <h1 class="offers-title">New Tires</h1>
+        <p class="offers-description">
+            High-quality new tires for all types of vehicles, ensuring safety and performance on the road. 
+            Available in various sizes and brands to fit your needs.
+        </p>
+        <ul>
+            <li>All-season tires</li>
+            <li>Performance tires</li>
+            <li>Truck and SUV tires</li>
+            <li>Specialty tires for off-road vehicles</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Filter Options</h2>
-            <p>Filter our tire selection by vehicle type, tire brand, or budget to find exactly what you need.</p>
-        </section>
+    <section class="offers-section">
+        <h1 class="offers-title">Used Tires</h1>
+        <p class="offers-description">
+            Affordable and reliable used tires inspected for safety and durability. A great option for budget-conscious drivers.
+        </p>
+        <ul>
+            <li>Lightly worn tires</li>
+            <li>Wide range of sizes</li>
+            <li>Inspected for tread depth and quality</li>
+            <li>Cost-effective alternative to new tires</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Featured Brands</h2>
-            <ul>
-                <li>Michelin</li>
-                <li>Goodyear</li>
-                <li>Bridgestone</li>
-                <li>Firestone</li>
-                <li>Continental</li>
-            </ul>
-        </section>
-    </main>
+    <section class="offers-section">
+        <h1 class="offers-title">Rims and Wheels</h1>
+        <p class="offers-description">
+            Enhance the look and performance of your vehicle with our selection of rims and wheels. Available in various designs and sizes.
+        </p>
+        <ul>
+            <li>Alloy and steel rims</li>
+            <li>Custom-fit wheels</li>
+            <li>Stylish designs to match your vehicle</li>
+            <li>Professional installation available</li>
+        </ul>
+    </section>
+
+    <section class="offers-section">
+        <h1 class="offers-title">Tire Repair Kits</h1>
+        <p class="offers-description">
+            Keep a tire repair kit handy for emergencies. Our kits include everything you need to fix minor tire issues on the go.
+        </p>
+        <ul>
+            <li>Plug kits for small punctures</li>
+            <li>Portable air compressors</li>
+            <li>High-quality patches and adhesives</li>
+            <li>Easy-to-use tools for DIY repairs</li>
+        </ul>
+    </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Tito's Tire Shop. All rights reserved.</p>
-        <p>Serving you in English and Spanish | <a href="contact.html">Contact Us</a></p>
+        <ul class="legal-links">
+            <li><a href="terms.html">Terms and Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="warranty.html">Warranty Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="accessibility.html">Accessibility Statement</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
     </footer>
 </body>
 </html>
