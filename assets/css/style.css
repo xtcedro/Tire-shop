@@ -3,31 +3,40 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1A2527; /* Dark black background */
-    color: #FFFFFF; /* White text for readability */
+    background-color: #001f3f; /* Darker blue background */
+    color: #D0D3D4; /* Light gray text for readability */
     line-height: 1.6;
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 /* Headings */
 h1, h2, h3 {
     font-weight: bold;
     text-transform: uppercase;
-    color: #FF6600; /* Bright orange headings */
+}
+
+/* Gold Gradient Titles */
+h1, h2 {
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Hero Section */
 .hero-section {
-    background-color: #252F34; /* Dark gray-black for hero background */
-    color: #FFFFFF;
+    background-color: #002855; /* Dark blue for hero background */
+    color: #fff;
     padding: 3rem 2rem;
     text-align: center;
 }
 
 .hero-title {
     font-size: 2.5rem;
+    text-align: center;
     margin-bottom: 1rem;
-    color: #FF6600; /* Bright orange for titles */
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -38,12 +47,11 @@ h1, h2, h3 {
     margin-bottom: 1.5rem;
 }
 
-/* Call to Action Button */
 .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #FF6600; /* Bright orange button */
-    color: #FFFFFF; /* White text */
+    background-color: #FFD700; /* Gold button */
+    color: #002855;
     font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
@@ -51,13 +59,13 @@ h1, h2, h3 {
 }
 
 .cta-button:hover {
-    background-color: #D35400; /* Slightly darker orange */
+    background-color: #D4AF37;
     transform: scale(1.05);
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #1A2527; /* Dark black for nav background */
+    background-color: #002855; /* Dark blue for nav background */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,8 +86,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #1A2527; /* Black text */
-    background-color: #FF6600; /* Bright orange background */
+    color: #002855;
+    background-color: #FFD700;
 }
 
 .hamburger {
@@ -134,8 +142,8 @@ nav a:hover {
 .services-section {
     padding: 3rem 2rem;
     text-align: center;
-    background-color: #1A2527;
-    color: #FFFFFF;
+    background-color: #001f3f;
+    color: #D0D3D4;
 }
 
 .services-container {
@@ -146,26 +154,25 @@ nav a:hover {
 }
 
 .service-item {
-    background: #252F34;
+    background: #003366;
     padding: 1.5rem;
     border: 1px solid #444;
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .service-item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-color: #FF6600;
 }
 
 /* Footer */
 footer {
-    background-color: #252F34;
-    color: #FFFFFF;
+    background-color: #002855;
+    color: #fff;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
@@ -173,12 +180,12 @@ footer {
 
 /* About Section */
 .about-section {
-    background-color: #1A2527;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #002855, #004080); /* Darker blue gradient */
+    color: #fff;
     padding: 3rem 2rem;
     text-align: center;
-    border: 4px solid #FF6600;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 4px solid #FFD700; /* Gold border */
+    box-shadow: 0 4px 15px rgba(0, 40, 85, 0.2);
     border-radius: 10px;
     margin: 2rem auto;
     max-width: 900px;
@@ -186,7 +193,7 @@ footer {
 
 .about-section h2 {
     font-size: 1.8rem;
-    color: #FF6600; /* Orange for headings */
+    color: #ffcc00; /* Gold color */
     margin-bottom: 1rem;
 }
 
@@ -196,13 +203,38 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+.about-section a {
+    color: #ffcc00; /* Gold for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.about-section a:hover {
+    color: #d4af37; /* Lighter gold on hover */
+}
+
+
+/* Blockquote Styling */
+blockquote {
+    font-style: italic;
+    background-color: #003366; /* Slightly lighter blue */
+    padding: 1.5rem;
+    border-left: 5px solid #FFD700; /* Gold border */
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 2rem auto;
+    color: #fff;
+    max-width: 700px;
+}
+
 /* Call to Action Section */
 .call-to-action-section {
-    background-color: #1A2527;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #001f3f, #003366); /* Dark blue gradient */
+    color: #fff;
     padding: 3rem 2rem;
     text-align: center;
-    border-top: 4px solid #FF6600;
+    border-top: 4px solid #FFD700; /* Gold border */
     border-radius: 10px;
     margin: 2rem auto;
     max-width: 900px;
@@ -212,23 +244,25 @@ footer {
 .call-to-action-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #FF6600;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .call-to-action-section p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
-    color: #FFFFFF;
+    color: #D0D3D4; /* Light gray */
 }
 
 .call-to-action-section strong {
-    color: #FF6600;
+    color: #FFD700; /* Gold for emphasis */
 }
 
 .call-to-action-section .cta-button {
-    background-color: #FF6600;
-    color: #FFFFFF;
+    background-color: #FFD700; /* Gold button */
+    color: #001f3f; /* Dark blue text */
     padding: 0.75rem 2rem;
     font-size: 1rem;
     font-weight: bold;
@@ -239,13 +273,60 @@ footer {
 }
 
 .call-to-action-section .cta-button:hover {
-    background-color: #D35400;
+    background-color: #D4AF37;
     transform: scale(1.05);
 }
 
+/* Header Titles */
+.header-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Input Fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="time"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444; /* Subtle border */
+    border-radius: 5px;
+    background-color: #002855; /* Dark blue background */
+    color: #fff; /* White text */
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
 /* Language Modal */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Prevents scrolling when the modal is open */
+}
+
+/* Modal Content */
 .modal-content {
-    background-color: #252F34; /* Dark gray */
+    background-color: #001f3f; /* Dark navy blue */
     color: #FFFFFF; /* White text */
     padding: 2rem;
     text-align: center;
@@ -260,7 +341,7 @@ footer {
 .modal-content h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
-    background: linear-gradient(135deg, #FF6600, #D35400); /* Orange gradient */
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -275,7 +356,7 @@ footer {
 
 /* Language Buttons */
 .language-options button {
-    background-color: #252F34; /* Dark gray background */
+    background-color: #003366; /* Slightly lighter blue */
     color: #FFFFFF; /* White text */
     padding: 1rem 1.5rem;
     border: none;
@@ -292,8 +373,8 @@ footer {
 
 /* Hover Effect for Buttons */
 .language-options button:hover {
-    background-color: #FF6600; /* Bright orange hover effect */
-    color: #1A2527; /* Black text on hover */
+    background-color: #FFD700; /* Gold hover effect */
+    color: #001f3f; /* Dark blue text on hover */
     transform: scale(1.05); /* Slight zoom */
 }
 
@@ -303,35 +384,156 @@ footer {
     height: 32px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for flags */
-    background-color: #FFFFFF; /* Optional: white background for consistency */
 }
 
-/* Input Fields */
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="date"],
-form input[type="time"],
-form select,
-form textarea {
+/* Desktop Navigation Bar */
+.desktop-nav {
+    display: flex;
+    justify-content: center; /* Center-align the links */
+    align-items: center;
+    gap: 2rem; /* Space between links */
+    background-color: #002855; /* Dark blue background */
+    padding: 1rem 0;
+    border-bottom: 2px solid #FFD700; /* Gold border at the bottom */
+    position: relative; /* For any potential positioning tweaks */
+    z-index: 10; /* Ensures it stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Navigation Links */
+.desktop-nav a {
+    color: #FFFFFF; /* White text for links */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded edges for links */
+}
+
+/* Hover Effect for Links */
+.desktop-nav a:hover {
+    color: #002855; /* Dark blue text */
+    background-color: #FFD700; /* Gold background on hover */
+}
+
+/* Active Link Styling */
+.desktop-nav a.active {
+    color: #FFD700; /* Gold text for active link */
+    background-color: transparent; /* No background for active link */
+    border-bottom: 2px solid #FFD700; /* Gold underline for active state */
+}
+
+.contact-info {
+    background-color: #003366; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin: 2rem auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 600px;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    color: #ffcc00; /* Gold color */
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #ffcc00; /* Gold for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #d4af37; /* Lighter gold on hover */
+}
+
+/* General Form Styling */
+.form-container {
+    background: linear-gradient(135deg, #002855, #003366); /* Smooth gradient */
+    color: #ffffff; /* Text color */
+    padding: 2rem; /* Inner padding */
+    margin: 0 auto; /* Center the form horizontally */
+    max-width: 600px; /* Maximum width for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Floating Labels */
+.floating-label {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.floating-label input,
+.floating-label textarea {
+    width: 100%;
+    padding: 0.75rem 0.5rem; /* Adjust padding for proper text alignment */
+    border: 1px solid #004080; /* Input border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #003366; /* Input background */
+    color: #ffffff; /* Input text color */
+    font-size: 1rem; /* Input font size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.floating-label label {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 0.5rem; /* Align with padding */
+    font-size: 1rem;
+    color: #ffcc00; /* Gold label color */
+    pointer-events: none; /* Prevent interaction with the label */
+    transform: translateY(-50%); /* Center transform */
+    transition: all 0.3s ease;
+}
+
+/* When input is focused or has content */
+.floating-label input:focus + label,
+.floating-label textarea:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+    top: -0.8rem; /* Move above the input */
+    left: 0.5rem; /* Align with padding */
+    font-size: 0.85rem; /* Smaller font size */
+    color: #FFD700; /* Gold color for active label */
+}
+
+/* Placeholder Styling */
+.floating-label input::placeholder,
+.floating-label textarea::placeholder {
+    color: transparent; /* Hide placeholder text */
+}
+
+/* Focus State */
+.floating-label input:focus,
+.floating-label textarea:focus {
+    border-color: #FFD700; /* Gold border on focus */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); /* Gold glow */
+    outline: none;
+}
+
+.form-container textarea {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 1px solid #444; /* Subtle border */
+    border: 1px solid #004080;
     border-radius: 5px;
-    background-color: #252F34; /* Dark gray background */
-    color: #FFFFFF; /* White text */
+    background-color: #003366;
+    color: #ffffff;
     font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-/* Focus State for Inputs */
-form input:focus,
-form select:focus,
-form textarea:focus {
-    border-color: #FF6600; /* Orange border */
-    box-shadow: 0 0 5px rgba(255, 102, 0, 0.7); /* Orange glow */
-    outline: none;
+    resize: vertical; /* Allow vertical resizing */
 }
 
 /* Form Buttons */
@@ -339,8 +541,8 @@ form button {
     display: block;
     width: 100%; /* Full-width button */
     padding: 0.75rem;
-    background-color: #FF6600; /* Bright orange */
-    color: #FFFFFF; /* White text */
+    background-color: #FFD700; /* Gold button */
+    color: #002855; /* Dark blue text */
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -352,7 +554,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #D35400; /* Slightly darker orange */
+    background-color: #D4AF37; /* Slightly darker gold */
     transform: translateY(-2px); /* Button hover effect */
 }
 
@@ -373,146 +575,13 @@ form .success-message {
 }
 
 form .error-message {
-    background-color: #D9534F; /* Red background for errors */
+    background-color: #D9534F; /* Red background */
     color: #FFFFFF; /* White text */
 }
 
 form .success-message {
-    background-color: #5CB85C; /* Green background for success */
+    background-color: #5CB85C; /* Green background */
     color: #FFFFFF; /* White text */
-}
-
-/* Blockquote Styling */
-blockquote {
-    font-style: italic;
-    background-color: #252F34; /* Dark gray */
-    padding: 1.5rem;
-    border-left: 5px solid #FF6600; /* Orange border */
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin: 2rem auto;
-    color: #FFFFFF; /* White text */
-    max-width: 700px;
-}
-
-/* Offers Section */
-.offers-section {
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, #FF6600, #D35400); /* Vibrant orange gradient */
-    color: #FFFFFF; /* White text */
-    text-align: center;
-    border-radius: 12px; /* Smooth rounded corners */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
-    margin: 2rem auto;
-    max-width: 900px;
-    border: 4px solid #FF6600; /* Bright orange border */
-}
-
-/* Offers Title */
-.offers-title {
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #FFFFFF; /* White text for contrast */
-}
-
-/* Offers Description */
-.offers-description {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    color: #FFFFFF; /* White text */
-}
-
-/* Call to Action Button for Offers */
-.offers-cta-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #FF6600; /* Vibrant orange button */
-    color: #FFFFFF; /* White text */
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.offers-cta-button:hover {
-    background-color: #D35400; /* Darker orange on hover */
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Legal Links */
-.legal-links {
-    list-style-type: none; /* Removes default bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-    display: flex; /* Aligns items horizontally */
-    justify-content: center; /* Centers items */
-    gap: 10px; /* Adds spacing between items */
-    font-size: 0.9rem; /* Slightly smaller text */
-}
-
-.legal-links li {
-    display: inline; /* Ensures list items are inline */
-}
-
-.legal-links a {
-    text-decoration: none; /* Removes underline */
-    color: #FFFFFF; /* White text */
-}
-
-.legal-links a:hover {
-    color: #FF6600; /* Orange on hover */
-    text-decoration: underline; /* Adds underline on hover */
-}
-
-/* Floating Labels */
-.floating-label {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-.floating-label input,
-.floating-label textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #444; /* Subtle border */
-    border-radius: 5px;
-    background-color: #252F34; /* Dark gray */
-    color: #FFFFFF; /* White text */
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.floating-label label {
-    position: absolute;
-    top: 50%;
-    left: 0.5rem;
-    font-size: 1rem;
-    color: #FF6600; /* Orange label */
-    pointer-events: none;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-}
-
-/* Active or Focused Input */
-.floating-label input:focus + label,
-.floating-label textarea:focus + label,
-.floating-label input:not(:placeholder-shown) + label,
-.floating-label textarea:not(:placeholder-shown) + label {
-    top: -0.8rem;
-    left: 0.5rem;
-    font-size: 0.85rem;
-    color: #FF6600;
-}
-
-/* Placeholder Styling */
-.floating-label input::placeholder,
-.floating-label textarea::placeholder {
-    color: transparent; /* Hide placeholder text */
 }
 
 /* Animation for Messages */
@@ -527,23 +596,29 @@ blockquote {
     }
 }
 
-/* Adjusted .title-banner Styling */
-.title-banner {
-  width: 100vw;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  position: relative; /* Optional: Set background color */
-  top: 0;
-  left: 0;
-  z-index: 1;
+/* Legal Links */
+.legal-links {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers items */
+    gap: 10px; /* Adds spacing between items */
+    font-size: 22px; /* Makes the text slightly smaller */
 }
 
-.title-banner img {
-  display: block;
-  max-width: 100%; /* Slightly reduce size */
-  height: auto;
-  margin: 0 auto;
+.legal-links li {
+    display: inline; /* Ensures list items are inline */
+}
+
+.legal-links a {
+    text-decoration: none; /* Removes underline */
+    color: #555; /* Sets a neutral text color */
+}
+
+.legal-links a:hover {
+    color: #007BFF; /* Changes color on hover (use your theme's accent color) */
+    text-decoration: underline; /* Adds underline on hover */
 }
 
 /* Mobile View Styling (max-width: 767px) */
@@ -673,87 +748,83 @@ blockquote {
     }
 }
 
-/* Desktop Navigation Bar */
-.desktop-nav {
-    display: flex;
-    justify-content: center; /* Center-align the links */
-    align-items: center;
-    gap: 2rem; /* Space between links */
-    background-color: #1A2527; /* Black background */
-    padding: 1rem 0;
-    border-bottom: 2px solid #FF6600; /* Bright orange border at the bottom */
-    position: relative; /* For any potential positioning tweaks */
-    z-index: 10; /* Ensures it stays on top */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+/* Desktop View: Explicitly hide the hamburger menu */
+@media (min-width: 1025px) {
+  .hamburger {
+    display: none !important;
+  }
 }
 
-/* Navigation Links */
-.desktop-nav a {
-    color: #FFFFFF; /* White text for links */
-    text-decoration: none; /* Removes underline */
+/* Adjusted .title-banner Styling */
+.title-banner {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Optional: Set background color */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.title-banner img {
+  display: block;
+  max-width: 100%; /* Slightly reduce size */
+  height: auto;
+  margin: 0 auto;
+}
+
+html {
+ overflow-x: hidden;
+}
+
+/* Offers Section */
+.offers-section {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #FFD700, #FFAA00); /* Vibrant gold gradient */
+    color: #002855; /* Dark blue text */
+    text-align: center;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+    margin: 2rem auto;
+    max-width: 900px;
+    border: 4px solid #FFC200; /* Gold border for extra focus */
+}
+
+/* Offers Title */
+.offers-title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    padding: 0.5rem 1rem; /* Add padding for clickable area */
-    border-radius: 5px; /* Rounded edges for links */
+    background: linear-gradient(135deg, #002855, #003366); /* Blue gradient for contrast */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Hover Effect for Links */
-.desktop-nav a:hover {
-    color: #1A2527; /* Black text */
-    background-color: #FF6600; /* Bright orange background on hover */
+/* Offers Description */
+.offers-description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #001F3F; /* Slightly darker text for readability */
 }
 
-/* Active Link Styling */
-.desktop-nav a.active {
-    color: #FF6600; /* Bright orange text for active link */
-    background-color: transparent; /* No background for active link */
-    border-bottom: 2px solid #FF6600; /* Bright orange underline for active state */
-}
-
-/* Contact Info */
-.contact-info {
-    background-color: #252F34; /* Dark gray background */
+/* Call to Action Button */
+.offers-cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #FF6600; /* Vibrant orange button */
     color: #FFFFFF; /* White text */
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    margin: 2rem auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    max-width: 600px;
-}
-
-.contact-info h2 {
-    font-size: 1.8rem;
-    color: #FF6600; /* Bright orange color */
-    margin-bottom: 1rem;
-}
-
-.contact-info p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-}
-
-.contact-info a {
-    color: #FF6600; /* Bright orange for links */
-    text-decoration: none;
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-info a:hover {
-    color: #D35400; /* Slightly darker orange on hover */
-}
-
-/* General Form Styling */
-.form-container {
-    background: linear-gradient(135deg, #1A2527, #252F34); /* Smooth black-to-dark-gray gradient */
-    color: #FFFFFF; /* White text */
-    padding: 2rem; /* Inner padding */
-    margin: 0 auto; /* Center the form horizontally */
-    max-width: 600px; /* Maximum width for the form */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+.offers-cta-button:hover {
+    background-color: #D35400; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight zoom effect */
 }
