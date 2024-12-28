@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra las llantas perfectas para tu vehículo con Tito's TreadMatch OKC, una herramienta personalizada de recomendación de llantas.">
+    <title>TreadMatch OKC - Tito's Tire Shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 class="header-title">Tito's Tire Shop</h1>
+        <div class="title-banner">
+            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop - Oklahoma City">
+        </div>
+    </header>
+
+    <!-- Desktop Navigation -->
+    <div class="desktop-nav">
+        <a href="index_es.html">Inicio</a>
+        <a href="about_es.html">Sobre Nosotros</a>
+        <a href="services_es.html">Servicios</a>
+        <a href="products_es.html">Productos</a>
+        <a href="tire-recommendation_es.html" class="active">TreadMatch OKC</a>
+        <a href="appointments_es.html">Citas</a>
+        <a href="contact_es.html">Contáctanos</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="offers-section">
+        <h1 class="offers-title">Tito's TreadMatch OKC</h1>
+        <p class="offers-description">Encuentra las llantas perfectas para tu vehículo en solo unos clics.</p>
+    </section>
+
+    <!-- Tire Recommendation Tool -->
+    <section class="offers-section">
+        <h2 class="offers-title">Recomendaciones Personalizadas de Llantas</h2>
+        <p class="offers-description">Responde unas preguntas rápidas y te recomendaremos las mejores llantas para tu vehículo y tus necesidades de conducción.</p>
+        <form action="/submit_tire_recommendation" method="post">
+            <label for="vehicle-type">Tipo de Vehículo:</label>
+            <select id="vehicle-type" name="vehicle_type" required>
+                <option value="">Selecciona el Tipo de Vehículo</option>
+                <option value="sedan">Sedán</option>
+                <option value="suv">SUV</option>
+                <option value="truck">Camión</option>
+                <option value="sports">Auto Deportivo</option>
+                <option value="off-road">Todoterreno</option>
+            </select>
+
+            <label for="driving-condition">Condiciones de Manejo:</label>
+            <select id="driving-condition" name="driving_condition" required>
+                <option value="">Selecciona las Condiciones de Manejo</option>
+                <option value="highway">Carretera</option>
+                <option value="city">Ciudad</option>
+                <option value="off-road">Todoterreno</option>
+                <option value="all-weather">Todo Clima</option>
+            </select>
+
+            <label for="budget">Rango de Presupuesto:</label>
+            <select id="budget" name="budget" required>
+                <option value="">Selecciona el Rango de Presupuesto</option>
+                <option value="economy">Económico</option>
+                <option value="mid-range">Intermedio</option>
+                <option value="premium">Premium</option>
+            </select>
+
+            <button type="submit" class="cta-button">Obtener Recomendaciones</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tito's Tire Shop. Todos los derechos reservados.</p>
+        <ul class="legal-links">
+            <li><a href="terms_es.html">Términos y Condiciones</a></li>
+            <li><a href="privacy_es.html">Política de Privacidad</a></li>
+            <li><a href="disclaimer_es.html">Aviso Legal</a></li>
+            <li><a href="warranty_es.html">Política de Garantía</a></li>
+            <li><a href="refund_es.html">Política de Reembolso</a></li>
+            <li><a href="accessibility_es.html">Declaración de Accesibilidad</a></li>
+            <li><a href="cookies_es.html">Política de Cookies</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
