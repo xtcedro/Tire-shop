@@ -3,10 +3,10 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #001f3f; /* Darker blue background */
-    color: #D0D3D4; /* Light gray text for readability */
+    background-color: #121212; /* Dark background for contrast */
+    color: #FFFFFF; /* White text for readability */
     line-height: 1.6;
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 /* Headings */
@@ -17,15 +17,15 @@ h1, h2, h3 {
 
 /* Gold Gradient Titles */
 h1, h2 {
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    background: linear-gradient(135deg, #FF6600, #FF4500, #FF3300); /* Gradient with tire shop's orange tones */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Hero Section */
 .hero-section {
-    background-color: #002855; /* Dark blue for hero background */
-    color: #fff;
+    background-color: #1C1C1C; /* Dark gray for hero background */
+    color: #FFFFFF; /* White text for contrast */
     padding: 3rem 2rem;
     text-align: center;
 }
@@ -33,13 +33,14 @@ h1, h2 {
 .hero-section p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    color: #FFCC00; /* Gold for text */
 }
 
 .hero-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    background: linear-gradient(135deg, #FF6600, #FF4500, #FF3300); /* Orange gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -50,8 +51,8 @@ h1, h2 {
 .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #FFD700; /* Gold button */
-    color: #002855;
+    background-color: #FF4500; /* Bright orange for the button */
+    color: #FFFFFF; /* White text for contrast */
     font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
@@ -59,13 +60,13 @@ h1, h2 {
 }
 
 .cta-button:hover {
-    background-color: #D4AF37;
+    background-color: #FF3300; /* Darker orange on hover */
     transform: scale(1.05);
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #002855; /* Dark blue for nav background */
+    background-color: #1C1C1C; /* Dark gray for nav background */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +76,7 @@ nav {
 }
 
 nav a {
-    color: #FFFFFF;
+    color: #FFCC00; /* Gold text for links */
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -86,16 +87,16 @@ nav a {
 }
 
 nav a:hover {
-    color: #002855;
-    background-color: #FFD700;
+    color: #FFFFFF; /* White text on hover */
+    background-color: #FF4500; /* Bright orange background on hover */
 }
 
 /* Services Section */
 .services-section {
     padding: 3rem 2rem;
     text-align: center;
-    background-color: #001f3f;
-    color: #D0D3D4;
+    background-color: #1C1C1C; /* Dark gray background */
+    color: #FFCC00; /* Gold text for titles */
 }
 
 .services-container {
@@ -106,25 +107,25 @@ nav a:hover {
 }
 
 .service-item {
-    background: #003366;
+    background: #2B2B2B; /* Slightly lighter gray for contrast */
     padding: 1.5rem;
-    border: 1px solid #444;
+    border: 1px solid #444; /* Subtle border for structure */
     border-radius: 8px;
     width: 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #fff;
+    color: #FFFFFF; /* White text for readability */
 }
 
 .service-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(255, 102, 0, 0.5); /* Orange glow on hover */
 }
 
 /* Footer */
 footer {
-    background-color: #002855;
-    color: #fff;
+    background-color: #1C1C1C; /* Dark gray for the footer background */
+    color: #FFCC00; /* Gold text for footer content */
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
@@ -132,12 +133,12 @@ footer {
 
 /* About Section */
 .about-section {
-    background: linear-gradient(135deg, #002855, #004080); /* Darker blue gradient */
-    color: #fff;
+    background: linear-gradient(135deg, #2B2B2B, #1C1C1C); /* Dark gray gradient */
+    color: #FFFFFF; /* White text */
     padding: 3rem 2rem;
     text-align: center;
-    border: 4px solid #FFD700; /* Gold border */
-    box-shadow: 0 4px 15px rgba(0, 40, 85, 0.2);
+    border: 4px solid #FF6600; /* Bright orange border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
     border-radius: 10px;
     margin: 2rem auto;
     max-width: 900px;
@@ -145,7 +146,7 @@ footer {
 
 .about-section h2 {
     font-size: 1.8rem;
-    color: #ffcc00; /* Gold color */
+    color: #FFCC00; /* Gold color for headings */
     margin-bottom: 1rem;
 }
 
@@ -153,50 +154,51 @@ footer {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
+    color: #FFFFFF; /* White text for readability */
 }
 
 .about-section a {
-    color: #ffcc00; /* Gold for links */
+    color: #FF4500; /* Bright orange for links */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .about-section a:hover {
-    color: #d4af37; /* Lighter gold on hover */
+    color: #FF3300; /* Darker orange on hover */
 }
 
 
 /* Blockquote Styling */
 blockquote {
     font-style: italic;
-    background-color: #003366; /* Slightly lighter blue */
+    background-color: #2B2B2B; /* Slightly lighter dark gray */
     padding: 1.5rem;
-    border-left: 5px solid #FFD700; /* Gold border */
+    border-left: 5px solid #FF6600; /* Bright orange border */
     border-radius: 5px;
     font-size: 1.1rem;
     margin: 2rem auto;
-    color: #fff;
+    color: #FFFFFF; /* White text */
     max-width: 700px;
 }
 
 /* Call to Action Section */
 .call-to-action-section {
-    background: linear-gradient(135deg, #001f3f, #003366); /* Dark blue gradient */
-    color: #fff;
+    background: linear-gradient(135deg, #1C1C1C, #2B2B2B); /* Dark gray gradient */
+    color: #FFFFFF; /* White text */
     padding: 3rem 2rem;
     text-align: center;
-    border-top: 4px solid #FFD700; /* Gold border */
+    border-top: 4px solid #FF6600; /* Bright orange border */
     border-radius: 10px;
     margin: 2rem auto;
     max-width: 900px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
 }
 
 .call-to-action-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    background: linear-gradient(135deg, #FF6600, #FF4500, #FF3300); /* Orange gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -205,16 +207,16 @@ blockquote {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
-    color: #D0D3D4; /* Light gray */
+    color: #FFFFFF; /* White text for readability */
 }
 
 .call-to-action-section strong {
-    color: #FFD700; /* Gold for emphasis */
+    color: #FFCC00; /* Gold for emphasis */
 }
 
 .call-to-action-section .cta-button {
-    background-color: #FFD700; /* Gold button */
-    color: #001f3f; /* Dark blue text */
+    background-color: #FF4500; /* Bright orange button */
+    color: #FFFFFF; /* White text */
     padding: 0.75rem 2rem;
     font-size: 1rem;
     font-weight: bold;
@@ -225,7 +227,7 @@ blockquote {
 }
 
 .call-to-action-section .cta-button:hover {
-    background-color: #D4AF37;
+    background-color: #FF3300; /* Darker orange on hover */
     transform: scale(1.05);
 }
 
@@ -234,7 +236,7 @@ blockquote {
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    background: linear-gradient(135deg, #FF6600, #FF4500, #FF3300); /* Orange gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
@@ -255,8 +257,8 @@ form textarea {
     margin-bottom: 1rem;
     border: 1px solid #444; /* Subtle border */
     border-radius: 5px;
-    background-color: #002855; /* Dark blue background */
-    color: #fff; /* White text */
+    background-color: #1C1C1C; /* Dark gray background */
+    color: #FFFFFF; /* White text */
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -278,7 +280,7 @@ form textarea {
 
 /* Modal Content */
 .modal-content {
-    background-color: #001f3f; /* Dark navy blue */
+    background-color: #1C1C1C; /* Dark gray */
     color: #FFFFFF; /* White text */
     padding: 2rem;
     text-align: center;
@@ -293,7 +295,7 @@ form textarea {
 .modal-content h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    background: linear-gradient(135deg, #FF6600, #FF4500, #FF3300); /* Orange gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -308,7 +310,7 @@ form textarea {
 
 /* Language Buttons */
 .language-options button {
-    background-color: #003366; /* Slightly lighter blue */
+    background-color: #2B2B2B; /* Dark gray for buttons */
     color: #FFFFFF; /* White text */
     padding: 1rem 1.5rem;
     border: none;
@@ -325,8 +327,8 @@ form textarea {
 
 /* Hover Effect for Buttons */
 .language-options button:hover {
-    background-color: #FFD700; /* Gold hover effect */
-    color: #001f3f; /* Dark blue text on hover */
+    background-color: #FF6600; /* Bright orange hover effect */
+    color: #1C1C1C; /* Dark gray text on hover */
     transform: scale(1.05); /* Slight zoom */
 }
 
@@ -344,9 +346,9 @@ form textarea {
     justify-content: center; /* Center-align the links */
     align-items: center;
     gap: 2rem; /* Space between links */
-    background-color: #002855; /* Dark blue background */
+    background-color: #1C1C1C; /* Dark gray background */
     padding: 1rem 0;
-    border-bottom: 2px solid #FFD700; /* Gold border at the bottom */
+    border-bottom: 2px solid #FF6600; /* Bright orange border at the bottom */
     position: relative; /* For any potential positioning tweaks */
     z-index: 10; /* Ensures it stays on top */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -354,7 +356,7 @@ form textarea {
 
 /* Navigation Links */
 .desktop-nav a {
-    color: #FFFFFF; /* White text for links */
+    color: #FFCC00; /* Gold text for links */
     text-decoration: none; /* Removes underline */
     font-weight: bold;
     text-transform: uppercase;
@@ -366,31 +368,31 @@ form textarea {
 
 /* Hover Effect for Links */
 .desktop-nav a:hover {
-    color: #002855; /* Dark blue text */
-    background-color: #FFD700; /* Gold background on hover */
+    color: #FFFFFF; /* White text */
+    background-color: #FF4500; /* Bright orange background on hover */
 }
 
 /* Active Link Styling */
 .desktop-nav a.active {
-    color: #FFD700; /* Gold text for active link */
+    color: #FF4500; /* Bright orange text for active link */
     background-color: transparent; /* No background for active link */
-    border-bottom: 2px solid #FFD700; /* Gold underline for active state */
+    border-bottom: 2px solid #FF4500; /* Orange underline for active state */
 }
 
 .contact-info {
-    background-color: #003366; /* Dark blue background */
-    color: #ffffff; /* White text */
+    background-color: #2B2B2B; /* Dark gray background */
+    color: #FFFFFF; /* White text */
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
     margin: 2rem auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Slightly deeper shadow */
     max-width: 600px;
 }
 
 .contact-info h2 {
     font-size: 1.8rem;
-    color: #ffcc00; /* Gold color */
+    color: #FFCC00; /* Gold color */
     margin-bottom: 1rem;
 }
 
@@ -401,25 +403,25 @@ form textarea {
 }
 
 .contact-info a {
-    color: #ffcc00; /* Gold for links */
+    color: #FF4500; /* Bright orange for links */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #d4af37; /* Lighter gold on hover */
+    color: #FF3300; /* Darker orange on hover */
 }
 
 /* General Form Styling */
 .form-container {
-    background: linear-gradient(135deg, #002855, #003366); /* Smooth gradient */
-    color: #ffffff; /* Text color */
+    background: linear-gradient(135deg, #1C1C1C, #2B2B2B); /* Smooth dark gray gradient */
+    color: #FFFFFF; /* White text color */
     padding: 2rem; /* Inner padding */
     margin: 0 auto; /* Center the form horizontally */
     max-width: 600px; /* Maximum width for the form */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
 }
 
 /* Floating Labels */
@@ -432,10 +434,10 @@ form textarea {
 .floating-label textarea {
     width: 100%;
     padding: 0.75rem 0.5rem; /* Adjust padding for proper text alignment */
-    border: 1px solid #004080; /* Input border */
+    border: 1px solid #FF4500; /* Bright orange border */
     border-radius: 5px; /* Rounded corners */
-    background-color: #003366; /* Input background */
-    color: #ffffff; /* Input text color */
+    background-color: #2B2B2B; /* Dark gray background */
+    color: #FFFFFF; /* Input text color */
     font-size: 1rem; /* Input font size */
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
@@ -445,7 +447,7 @@ form textarea {
     top: 50%; /* Center vertically */
     left: 0.5rem; /* Align with padding */
     font-size: 1rem;
-    color: #ffcc00; /* Gold label color */
+    color: #FFCC00; /* Gold label color */
     pointer-events: none; /* Prevent interaction with the label */
     transform: translateY(-50%); /* Center transform */
     transition: all 0.3s ease;
@@ -459,7 +461,7 @@ form textarea {
     top: -0.8rem; /* Move above the input */
     left: 0.5rem; /* Align with padding */
     font-size: 0.85rem; /* Smaller font size */
-    color: #FFD700; /* Gold color for active label */
+    color: #FF6600; /* Bright orange for active label */
 }
 
 /* Placeholder Styling */
@@ -471,8 +473,8 @@ form textarea {
 /* Focus State */
 .floating-label input:focus,
 .floating-label textarea:focus {
-    border-color: #FFD700; /* Gold border on focus */
-    box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); /* Gold glow */
+    border-color: #FF6600; /* Bright orange border on focus */
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.7); /* Orange glow */
     outline: none;
 }
 
@@ -480,10 +482,10 @@ form textarea {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 1px solid #004080;
+    border: 1px solid #FF4500; /* Bright orange border */
     border-radius: 5px;
-    background-color: #003366;
-    color: #ffffff;
+    background-color: #2B2B2B; /* Dark gray background */
+    color: #FFFFFF; /* White text */
     font-size: 1rem;
     resize: vertical; /* Allow vertical resizing */
 }
@@ -493,8 +495,8 @@ form button {
     display: block;
     width: 100%; /* Full-width button */
     padding: 0.75rem;
-    background-color: #FFD700; /* Gold button */
-    color: #002855; /* Dark blue text */
+    background-color: #FF4500; /* Bright orange button */
+    color: #FFFFFF; /* White text */
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -502,17 +504,17 @@ form button {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Button shadow */
 }
 
 form button:hover {
-    background-color: #D4AF37; /* Slightly darker gold */
+    background-color: #FF3300; /* Darker orange on hover */
     transform: translateY(-2px); /* Button hover effect */
 }
 
 form button:active {
     transform: translateY(2px); /* Button press effect */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Reduce shadow */
 }
 
 /* Error and Success Messages */
@@ -527,12 +529,12 @@ form .success-message {
 }
 
 form .error-message {
-    background-color: #D9534F; /* Red background */
+    background-color: #FF3300; /* Red-orange background for errors */
     color: #FFFFFF; /* White text */
 }
 
 form .success-message {
-    background-color: #5CB85C; /* Green background */
+    background-color: #5CB85C; /* Green background for success */
     color: #FFFFFF; /* White text */
 }
 
