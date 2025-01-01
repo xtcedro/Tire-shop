@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore la gama de servicios ofrecidos por Tito's Tire Shop en Oklahoma City, incluyendo instalación de llantas, balanceo de ruedas, servicios de frenos y reparaciones de llantas.">
+    <meta name="description" content="Explore los servicios y productos de Tito's Tire Shop en Oklahoma City, incluyendo reparaciones de llantas, llantas nuevas y usadas, y rines.">
     <title>Servicios - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -13,71 +13,108 @@
     <header>
         <h1 class="header-title">Tito's Tire Shop</h1>
         <div class="title-banner">
-            <img src="assets/images/banner1.png" alt="Tito's Tire Shop">
+            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop">
         </div>
     </header>
-    
+
     <!-- Desktop Navigation -->
-    <div class="desktop-nav">
+    <nav class="desktop-nav">
         <a href="index_es.html">Inicio</a>
         <a href="about_es.html">Sobre Nosotros</a>
         <a href="services_es.html" class="active">Servicios</a>
         <a href="products_es.html">Productos</a>
-        <a href="tire-recommendation_es.html">TreadMatch OKC</a>
+        <a href="tire-recommendation_es.html">Tito's TreadMatch OKC</a>
         <a href="appointments_es.html">Citas</a>
-        <a href="contact_es.html">Contáctanos</a>
-    </div>
-    
-    <!-- Hero Section -->
-    <section class="services-section">
-        <h1>Nuestros Servicios</h1>
-        <p>Servicios integrales de llantas y automóviles adaptados a sus necesidades.</p>
+        <a href="contact_es.html">Contáctenos</a>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Servicios Integrales de Llantas para su Seguridad y Rendimiento</h1>
+        <blockquote>
+            <em>"Su seguridad en la carretera es nuestra principal prioridad. Permítanos mantenerlo en movimiento."</em>
+        </blockquote>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>Nuestros Servicios</h2>
         <div class="services-container">
-            <!-- Tire Installation -->
+            <!-- New Tires -->
             <div class="service-item">
-                <h2>Instalación de Llantas</h2>
-                <p>Ofrecemos servicios expertos de instalación de llantas para todo tipo de vehículos. Asegure su seguridad en el camino con una instalación profesional.</p>
+                <h3>🚗 Llantas Nuevas</h3>
+                <p>
+                    Garantice la seguridad y el rendimiento de su vehículo con nuestras llantas nuevas de alta calidad.
+                    Ofrecemos una amplia gama de marcas y tamaños para satisfacer todas sus necesidades.
+                </p>
                 <ul>
-                    <li>Instalación de llantas nuevas</li>
-                    <li>Instalación de llantas usadas</li>
-                    <li>Montaje y balanceo adecuados</li>
+                    <li>Llantas para todas las estaciones</li>
+                    <li>Llantas de alto rendimiento</li>
+                    <li>Llantas para camiones y SUV</li>
+                    <li>Llantas especiales para vehículos todoterreno</li>
                 </ul>
+                <button class="cta-button" onclick="location.href='appointments_es.html'">Comprar Llantas Nuevas</button>
             </div>
 
-            <!-- Wheel Balancing and Alignment -->
+            <!-- Used Tires -->
             <div class="service-item">
-                <h2>Balanceo y Alineación de Ruedas</h2>
-                <p>Mantenga su vehículo funcionando sin problemas con nuestros servicios de balanceo y alineación de ruedas de precisión, asegurando un desgaste uniforme de las llantas y un rendimiento óptimo.</p>
+                <h3>🛞 Llantas Usadas</h3>
+                <p>
+                    Llantas usadas asequibles, inspeccionadas y confiables para conductores conscientes del presupuesto.
+                    Perfectas para uso temporal o a largo plazo.
+                </p>
                 <ul>
-                    <li>Balanceo preciso de ruedas</li>
-                    <li>Ajustes de alineación</li>
-                    <li>Mayor durabilidad de las llantas</li>
+                    <li>Llantas ligeramente usadas</li>
+                    <li>Amplia gama de tamaños</li>
+                    <li>Inspeccionadas por seguridad</li>
+                    <li>Opciones rentables</li>
                 </ul>
+                <button class="cta-button" onclick="location.href='appointments_es.html'">Explorar Llantas Usadas</button>
             </div>
 
             <!-- Tire Repairs -->
             <div class="service-item">
-                <h2>Reparaciones de Llantas</h2>
-                <p>Ofrecemos servicios de reparación de llantas confiables y asequibles para que vuelva a la carretera de manera segura y rápida.</p>
+                <h3>🔧 Reparaciones de Llantas</h3>
+                <p>
+                    ¿Pinchaduras, fugas o baja presión? Nuestros servicios de reparación de llantas son rápidos, confiables y asequibles.
+                </p>
                 <ul>
-                    <li>Reparaciones con parches ($15 por parche)</li>
-                    <li>Reparaciones con tapones ($7 por tapón)</li>
-                    <li>Asistencia en carretera de emergencia</li>
+                    <li>Parcheo: $15</li>
+                    <li>Tapones: $7</li>
+                    <li>Recarga de aire: $1</li>
+                    <li>Servicio rápido y profesional</li>
                 </ul>
+                <button class="cta-button" onclick="location.href='appointments_es.html'">Reparar Mis Llantas</button>
             </div>
 
-            <!-- Brake Services -->
+            <!-- Rims and Wheels -->
             <div class="service-item">
-                <h2>Servicios de Frenos</h2>
-                <p>Mantenga la seguridad de su vehículo con nuestros servicios completos de frenos, incluyendo inspecciones, reparaciones y reemplazos.</p>
+                <h3>⚙️ Rines y Llantas</h3>
+                <p>
+                    Mejore el aspecto y el rendimiento de su vehículo con nuestra selección de rines y llantas.
+                    Ofrecemos instalación y personalización.
+                </p>
                 <ul>
-                    <li>Reemplazo de pastillas de freno</li>
-                    <li>Diagnóstico del sistema de frenos</li>
-                    <li>Reemplazo de líquido de frenos</li>
+                    <li>Rines de aleación y acero</li>
+                    <li>Llantas a medida</li>
+                    <li>Diseños elegantes</li>
+                    <li>Instalación profesional</li>
                 </ul>
+                <button class="cta-button" onclick="location.href='appointments_es.html'">Actualizar Mis Rines</button>
             </div>
         </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="call-to-action-section">
+        <h2>¿Por Qué Elegir Tito's Tire Shop?</h2>
+        <ul>
+            <li><strong>🚗 Calidad:</strong> Productos y servicios de primera calidad en los que puede confiar.</li>
+            <li><strong>💰 Asequibilidad:</strong> Precios competitivos para ajustarse a su presupuesto.</li>
+            <li><strong>⚡ Rápido:</strong> Tiempos de entrega rápidos para que regrese a la carretera lo antes posible.</li>
+            <li><strong>🌟 Enfoque Comunitario:</strong> Orgullosamente sirviendo a los conductores de Oklahoma City con cuidado y dedicación.</li>
+        </ul>
+        <button class="cta-button" onclick="location.href='appointments_es.html'">Agendar Una Cita Hoy</button>
     </section>
 
     <!-- Footer -->
@@ -86,9 +123,9 @@
         <ul class="legal-links">
             <li><a href="terms_es.html">Términos y Condiciones</a></li>
             <li><a href="privacy_es.html">Política de Privacidad</a></li>
-            <li><a href="disclaimer_es.html">Aviso Legal</a></li>
+            <li><a href="disclaimer_es.html">Descargo de Responsabilidad</a></li>
             <li><a href="warranty_es.html">Política de Garantía</a></li>
-            <li><a href="refund_es.html">Política de Reembolsos</a></li>
+            <li><a href="refund_es.html">Política de Reembolso</a></li>
             <li><a href="accessibility_es.html">Declaración de Accesibilidad</a></li>
             <li><a href="cookies_es.html">Política de Cookies</a></li>
         </ul>
