@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the range of services offered by Tito's Tire Shop in Oklahoma City, including tire installation, wheel balancing, brake services, and tire repairs.">
+    <meta name="description" content="Explore the range of tire services and products offered by Tito's Tire Shop in Oklahoma City, including tire repairs, new and used tires, and rims.">
     <title>Services - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -18,7 +18,7 @@
     </header>
 
     <!-- Desktop Navigation -->
-    <div class="desktop-nav">
+    <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="services.html" class="active">Services</a>
@@ -26,58 +26,95 @@
         <a href="tire-recommendation.html">Tito's TreadMatch OKC</a>
         <a href="appointments.html">Appointments</a>
         <a href="contact.html">Contact Us</a>
-    </div>
-    
-    <!-- Hero Section -->
-    <section class="services-section">
-        <h1>Our Services</h1>
-        <p>Comprehensive tire and auto services tailored to your needs.</p>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Comprehensive Tire Services for Your Safety and Performance</h1>
+        <blockquote>
+            <em>"Your safety on the road is our top priority. Let us keep you rolling."</em>
+        </blockquote>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
         <div class="services-container">
-            <!-- Tire Installation -->
+            <!-- New Tires -->
             <div class="service-item">
-                <h2>Tire Installation</h2>
-                <p>We provide expert tire installation services for all vehicle types. Ensure your safety on the road with professional installation.</p>
+                <h3>🚗 New Tires</h3>
+                <p>
+                    Ensure your vehicle’s safety and performance with our high-quality new tires.
+                    We offer a wide range of brands and sizes to fit every need.
+                </p>
                 <ul>
-                    <li>New tire installation</li>
-                    <li>Used tire installation</li>
-                    <li>Proper mounting and balancing</li>
+                    <li>All-season tires</li>
+                    <li>Performance tires</li>
+                    <li>Truck and SUV tires</li>
+                    <li>Specialty off-road tires</li>
                 </ul>
+                <button class="cta-button" onclick="location.href='appointments.html'">Shop New Tires</button>
             </div>
 
-            <!-- Wheel Balancing and Alignment -->
+            <!-- Used Tires -->
             <div class="service-item">
-                <h2>Wheel Balancing & Alignment</h2>
-                <p>Keep your vehicle running smoothly with our precision wheel balancing and alignment services, ensuring even tire wear and optimal performance.</p>
+                <h3>🛞 Used Tires</h3>
+                <p>
+                    Affordable, inspected, and reliable used tires for budget-conscious drivers.
+                    Perfect for temporary or long-term use.
+                </p>
                 <ul>
-                    <li>Precision wheel balancing</li>
-                    <li>Alignment adjustments</li>
-                    <li>Improved tire longevity</li>
+                    <li>Lightly worn tires</li>
+                    <li>Wide range of sizes</li>
+                    <li>Inspected for safety</li>
+                    <li>Cost-effective options</li>
                 </ul>
+                <button class="cta-button" onclick="location.href='appointments.html'">Browse Used Tires</button>
             </div>
 
             <!-- Tire Repairs -->
             <div class="service-item">
-                <h2>Tire Repairs</h2>
-                <p>We offer affordable and reliable tire repair services to get you back on the road safely and quickly.</p>
+                <h3>🔧 Tire Repairs</h3>
+                <p>
+                    Punctures, leaks, or low air pressure? Our expert tire repair services are fast, reliable, and affordable.
+                </p>
                 <ul>
-                    <li>Patch repairs ($15 per patch)</li>
-                    <li>Plug repairs ($7 per plug)</li>
-                    <li>Emergency roadside assistance</li>
+                    <li>Patches: $15</li>
+                    <li>Plugs: $7</li>
+                    <li>Air refill: $1</li>
+                    <li>Quick, professional service</li>
                 </ul>
+                <button class="cta-button" onclick="location.href='appointments.html'">Repair My Tires</button>
             </div>
 
-            <!-- Brake Services -->
+            <!-- Rims and Wheels -->
             <div class="service-item">
-                <h2>Brake Services</h2>
-                <p>Maintain your vehicle's safety with our comprehensive brake services, including inspections, repairs, and replacements.</p>
+                <h3>⚙️ Rims and Wheels</h3>
+                <p>
+                    Enhance your vehicle's look and performance with our selection of rims and wheels.
+                    We offer installation and customization.
+                </p>
                 <ul>
-                    <li>Brake pad replacements</li>
-                    <li>Brake system diagnostics</li>
-                    <li>Brake fluid replacement</li>
+                    <li>Alloy and steel rims</li>
+                    <li>Custom-fit wheels</li>
+                    <li>Stylish designs</li>
+                    <li>Professional installation</li>
                 </ul>
+                <button class="cta-button" onclick="location.href='appointments.html'">Upgrade My Rims</button>
             </div>
         </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="call-to-action-section">
+        <h2>Why Choose Tito's Tire Shop?</h2>
+        <ul>
+            <li><strong>🚗 Quality:</strong> Premium products and services you can trust.</li>
+            <li><strong>💰 Affordable:</strong> Competitive pricing to fit your budget.</li>
+            <li><strong>⚡ Fast:</strong> Quick turnarounds so you’re back on the road sooner.</li>
+            <li><strong>🌟 Community-Focused:</strong> Proudly serving Oklahoma City drivers with care and dedication.</li>
+        </ul>
+        <button class="cta-button" onclick="location.href='appointments.html'">Book an Appointment Today</button>
     </section>
 
     <!-- Footer -->
