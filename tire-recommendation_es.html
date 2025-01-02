@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Encuentra las llantas perfectas para tu vehículo con Tito's TreadMatch OKC, una herramienta personalizada de recomendación de llantas.">
-    <title>TreadMatch OKC - Tito's Tire Shop</title>
+    <title>Tito's TreadMatch OKC - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -23,7 +23,8 @@
         <a href="about_es.html">Sobre Nosotros</a>
         <a href="services_es.html">Servicios</a>
         <a href="products_es.html">Productos</a>
-        <a href="tire-recommendation_es.html" class="active">TreadMatch OKC</a>
+        <a href="tire-recommendation_es.html"
+class="active">Tito's TreadMatch OKC</a>
         <a href="appointments_es.html">Citas</a>
         <a href="contact_es.html">Contáctanos</a>
     </div>
@@ -34,10 +35,22 @@
         <p class="offers-description">Encuentra las llantas perfectas para tu vehículo en solo unos clics.</p>
     </section>
 
+    <!-- Location and Hours Section -->
+    <section class="about-section">
+        <h2>Ubicación y Horario</h2>
+        <p><strong>Dirección:</strong> 1350 Northwest 30th Street, Oklahoma City, Oklahoma, USA</p>
+        <p><strong>Horario:</strong></p>
+        <ul>
+            <li>Lunes a Viernes: 9 A.M. - 7 P.M.</li>
+            <li>Sábado: 9 A.M. - 6 P.M.</li>
+            <li>Domingo: Cerrado</li>
+        </ul>
+    </section>
+
     <!-- Tire Recommendation Tool -->
     <section class="offers-section">
         <h2 class="offers-title">Recomendaciones Personalizadas de Llantas</h2>
-        <p class="offers-description">Responde unas preguntas rápidas y te recomendaremos las mejores llantas para tu vehículo y tus necesidades de conducción.</p>
+        <p class="offers-description">Responde unas preguntas rápidas y te recomendaremos las mejores llantas para tu vehículo y necesidades de manejo.</p>
         <form action="/submit_tire_recommendation" method="post">
             <label for="vehicle-type">Tipo de Vehículo:</label>
             <select id="vehicle-type" name="vehicle_type" required>
@@ -45,16 +58,16 @@
                 <option value="sedan">Sedán</option>
                 <option value="suv">SUV</option>
                 <option value="truck">Camión</option>
-                <option value="sports">Auto Deportivo</option>
-                <option value="off-road">Todoterreno</option>
+                <option value="sports">Deportivo</option>
+                <option value="off-road">Todo Terreno</option>
             </select>
 
             <label for="driving-condition">Condiciones de Manejo:</label>
             <select id="driving-condition" name="driving_condition" required>
                 <option value="">Selecciona las Condiciones de Manejo</option>
-                <option value="highway">Carretera</option>
+                <option value="highway">Autopista</option>
                 <option value="city">Ciudad</option>
-                <option value="off-road">Todoterreno</option>
+                <option value="off-road">Todo Terreno</option>
                 <option value="all-weather">Todo Clima</option>
             </select>
 
@@ -62,7 +75,7 @@
             <select id="budget" name="budget" required>
                 <option value="">Selecciona el Rango de Presupuesto</option>
                 <option value="economy">Económico</option>
-                <option value="mid-range">Intermedio</option>
+                <option value="mid-range">Gama Media</option>
                 <option value="premium">Premium</option>
             </select>
 
