@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tito's Tire Shop ofrece servicios y productos de calidad, incluyendo llantas nuevas y usadas, reparaciones de llantas y una herramienta única de recomendación de llantas en Oklahoma City.">
-    <title>Inicio - Tito's Tire Shop</title>
+    <meta name="description" content="Tito's Tire Shop offers quality tire services and products, including new and used tires, tire repairs, and a unique tire recommendation tool in Oklahoma City.">
+    <title>Home - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        function setLanguage(lang) {
+            if (lang === 'es') {
+                window.location.href = 'index_es.html'; // Redirect to Spanish version
+            } else {
+                document.getElementById('language-modal').style.display = 'none';
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <!-- Encabezado -->
+    <!-- Language Selection Modal -->
+    <div id="language-modal" class="modal">
+        <div class="modal-content">
+            <h2>Language / Idioma</h2>
+            <div class="language-options">
+                <button onclick="setLanguage('en')">
+                    <img src="assets/images/us-flag.png" alt="English" class="flag-icon"> English
+                </button>
+                <button onclick="setLanguage('es')">
+                    <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon"> Español
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
     <header>
         <h1 class="header-title">Tito's Tire Shop</h1>
         <div class="title-banner">
@@ -17,78 +41,78 @@
         </div>
     </header>
 
-    <!-- Navegación de Escritorio -->
+    <!-- Desktop Navigation -->
     <nav class="desktop-nav">
-        <a href="index_es.html" class="active">Inicio</a>
-        <a href="about_es.html">Sobre Nosotros</a>
-        <a href="services_es.html">Servicios</a>
-        <a href="products_es.html">Productos</a>
-        <a href="tire-recommendation_es.html">Tito's TreadMatch OKC</a>
-        <a href="appointments_es.html">Citas</a>
-        <a href="contact_es.html">Contáctenos</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="tire-recommendation.html">Tito's TreadMatch OKC</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
 
-    <!-- Sección Principal -->
+    <!-- Hero Section -->
     <section class="hero-section">
-        <h1 class="hero-title">Bienvenido a Tito's Tire Shop - Tus Expertos de Confianza en Llantas en Oklahoma City</h1>
+        <h1 class="hero-title">Welcome to Tito's Tire Shop - Your Trusted Tire Experts in Oklahoma City</h1>
         <p>
-            En <strong>Tito's Tire Shop</strong>, nos enorgullecemos de ofrecer los mejores servicios de llantas, incluyendo 
-            <strong>venta de llantas nuevas y usadas</strong>, <strong>reparaciones de llantas</strong> y nuestra exclusiva 
-            herramienta <strong>Tito's TreadMatch OKC</strong> para ayudarte a encontrar las llantas perfectas para tu vehículo.
+            At <strong>Tito's Tire Shop</strong>, we pride ourselves on offering the best tire services, including 
+            <strong>new and used tire sales</strong>, <strong>tire repairs</strong>, and our exclusive 
+            <strong>Tito's TreadMatch OKC</strong> tool to help you find the perfect tires for your vehicle.
         </p>
         <p>
-            Visítanos en <strong>1350 Northwest 30th Street, Oklahoma City</strong>, y experimenta un servicio de calidad a precios competitivos.
+            Visit us at <strong>1350 Northwest 30th Street, Oklahoma City</strong>, and experience quality service at competitive prices.
         </p>
-        <button class="cta-button" onclick="location.href='products_es.html'">Explorar Nuestros Productos</button>
+        <button class="cta-button" onclick="location.href='products.html'">Explore Our Products</button>
     </section>
 
-    <!-- Sección de Ubicación y Horarios -->
+    <!-- Location and Hours Section -->
     <section class="about-section">
-        <h2>Nuestra Ubicación y Horarios</h2>
-        <p><strong>Dirección:</strong> 1350 Northwest 30th Street, Oklahoma City, Oklahoma, USA</p>
-        <p><strong>Horarios:</strong></p>
+        <h2>Our Location and Hours</h2>
+        <p><strong>Address:</strong> 1350 Northwest 30th Street, Oklahoma City, Oklahoma, USA</p>
+        <p><strong>Hours:</strong></p>
         <ul>
-            <li>Lun - Vie: 9 A.M. - 7 P.M.</li>
-            <li>Sáb: 9 A.M. - 6 P.M.</li>
-            <li>Dom: Cerrado</li>
+            <li>Mon - Fri: 9 A.M. - 7 P.M.</li>
+            <li>Sat: 9 A.M. - 6 P.M.</li>
+            <li>Sun: Closed</li>
         </ul>
     </section>
 
-    <!-- Sección de Servicios -->
+    <!-- Services Section -->
     <section id="services" class="services-section">
-        <h2>Nuestros Servicios</h2>
+        <h2>Our Services</h2>
         <div class="services-container">
             <div class="service-item">
-                <h3>🔧 Instalación de Llantas</h3>
-                <p>Instalación profesional de llantas nuevas y usadas para garantizar tu seguridad en la carretera.</p>
+                <h3>🔧 Tire Installation</h3>
+                <p>Professional installation for new and used tires to ensure your safety on the road.</p>
             </div>
             <div class="service-item">
-                <h3>⚙️ Reparaciones de Llantas</h3>
-                <p>Parcheo y reparación de llantas desde solo $7. Mantenemos tus ruedas en movimiento de forma segura.</p>
+                <h3>⚙️ Tire Repairs</h3>
+                <p>Affordable patches and plugs starting at just $7. We keep you rolling safely.</p>
             </div>
             <div class="service-item">
-                <h3>🚗 Balanceo de Llantas</h3>
-                <p>Balanceo y alineación precisos para una conducción más suave y eficiente en combustible.</p>
+                <h3>🚗 Tire Balancing</h3>
+                <p>Precise tire balancing and alignment for a smoother, more fuel-efficient ride.</p>
             </div>
             <div class="service-item">
-                <h3>🌟 Servicios de Frenos</h3>
-                <p>Mantenimiento y reparación integral de frenos para mantenerte seguro en la carretera.</p>
+                <h3>🌟 Brake Services</h3>
+                <p>Comprehensive brake maintenance and repairs to keep you safe on the road.</p>
             </div>
         </div>
-        <button class="cta-button" onclick="location.href='services_es.html'">Más Información</button>
+        <button class="cta-button" onclick="location.href='services.html'">Learn More</button>
     </section>
 
-    <!-- Pie de Página -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Tito's Tire Shop. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Tito's Tire Shop. All rights reserved.</p>
         <ul class="legal-links">
-            <li><a href="terms_es.html">Términos y Condiciones</a></li>
-            <li><a href="privacy_es.html">Política de Privacidad</a></li>
-            <li><a href="disclaimer_es.html">Aviso Legal</a></li>
-            <li><a href="warranty_es.html">Política de Garantía</a></li>
-            <li><a href="refund_es.html">Política de Reembolso</a></li>
-            <li><a href="accessibility_es.html">Declaración de Accesibilidad</a></li>
-            <li><a href="cookies_es.html">Política de Cookies</a></li>
+            <li><a href="terms.html">Terms and Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="warranty.html">Warranty Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="accessibility.html">Accessibility Statement</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
         </ul>
     </footer>
 </body>
