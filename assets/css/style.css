@@ -625,14 +625,23 @@ form .success-message {
 
     /* Adjusted .title-banner Styling */
     .title-banner {
-        padding: 1rem 0; /* Add spacing for mobile */
-        background-color: #f8f8f8; /* Optional: light background for contrast */
+	width: 100vw;
+	height: auto;
+	margin: 0;
+        padding: 0; /* Add spacing for mobile */
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
     }
 
     .title-banner img {
-        max-width: 100%; /* Ensure full responsiveness */
-        height: auto;
+	display: block;
+	width: 100vw;
+	height: auto;
         margin: 0 auto; /* Center the image */
+	object-fit: cover;
     }
 
     .services-container {
