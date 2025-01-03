@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tito's Tire Shop ofrece servicios y productos de calidad, incluyendo venta de llantas nuevas y usadas, reparaciones de llantas y una herramienta única para recomendar llantas en Oklahoma City.">
+    <meta name="description" content="Tito's Tire Shop ofrece servicios y productos de calidad, incluidas llantas nuevas y usadas, reparaciones de llantas y una herramienta única de recomendación de llantas en Oklahoma City.">
     <title>Inicio - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
+        // Lógica del Modal de Selección de Idioma
         function setLanguage(lang) {
-            if (lang === 'en') {
-                window.location.href = 'index.html'; // Redirigir a la versión en inglés
-            } else {
-                document.getElementById('language-modal').style.display = 'none';
+            if (lang === 'es') {
+                window.location.href = 'index_es.html';
+            } else if (lang === 'en') {
+                window.location.href = 'index.html';
             }
         }
+
+        function toggleLanguage() {
+            const isChecked = document.getElementById('language-switch').checked;
+            const languageText = document.getElementById('language-text');
+            if (isChecked) {
+                languageText.textContent = 'Español';
+                setLanguage('es');
+            } else {
+                languageText.textContent = 'English';
+                setLanguage('en');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('language-modal').style.display = 'none';
+        }
+
+        window.onload = function () {
+            document.getElementById('language-modal').style.display = 'flex';
+        };
     </script>
 </head>
 
@@ -21,15 +42,15 @@
     <!-- Modal de Selección de Idioma -->
     <div id="language-modal" class="modal">
         <div class="modal-content">
-            <h2>Idioma / Language</h2>
+            <h2>Por Favor Seleccione un Idioma / Please Select a Language</h2>
             <div class="language-options">
-                <button onclick="setLanguage('en')">
-                    <img src="assets/images/us-flag.png" alt="English" class="flag-icon"> English
-                </button>
-                <button onclick="setLanguage('es')">
-                    <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon"> Español
-                </button>
+                <label class="switch">
+                    <input type="checkbox" id="language-switch" onclick="toggleLanguage()">
+                    <span class="slider"></span>
+                </label>
+                <p id="language-text">Español</p>
             </div>
+            <button class="close-button" onclick="closeModal()" aria-label="Cerrar modal de selección de idioma">×</button>
         </div>
     </div>
 
@@ -37,11 +58,11 @@
     <header>
         <h1 class="header-title">Tito's Tire Shop</h1>
         <div class="title-banner">
-            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop">
+            <img src="assets/images/titos-banner.png" alt="Banner de Tito's Tire Shop">
         </div>
     </header>
 
-    <!-- Navegación de Escritorio -->
+    <!-- Navegación en Escritorio -->
     <nav class="desktop-nav">
         <a href="index_es.html" class="active">Inicio</a>
         <a href="about_es.html">Sobre Nosotros</a>
@@ -53,18 +74,22 @@
 
     <!-- Sección Hero -->
     <section class="hero-section">
-        <h1 class="hero-title">Bienvenidos a Tito's Tire Shop - Expertos en Llantas en Oklahoma City</h1>
-        <p>
-            En <strong>Tito's Tire Shop</strong>, ofrecemos servicios excepcionales de llantas, incluyendo
-            <strong>venta de llantas nuevas y usadas</strong>, <strong>reparaciones de llantas</strong> y nuestra exclusiva
-            herramienta <strong>Tito's TreadMatch OKC</strong> para ayudarle a encontrar las llantas perfectas para su vehículo.
-        </p>
-        <p class="hero-address">
-            Ubicados convenientemente en <strong>1305 Northwest 30th Street, Oklahoma City</strong>,
-            estamos aquí para servirle con calidad y precios competitivos.
-        </p>
-        <button class="cta-button" onclick="location.href='services_es.html'">Explorar Nuestros Servicios</button>
-        <button class="cta-button secondary" onclick="location.href='contact_es.html'">Contáctenos</button>
+        <h1 class="hero-title">Bienvenido a Tito's Tire Shop - Sus Expertos de Confianza en Llantas en Oklahoma City</h1>
+        <div class="hero-content">
+            <p>
+                En <strong>Tito's Tire Shop</strong>, ofrecemos servicios excepcionales de llantas, incluidas
+                <strong>ventas de llantas nuevas y usadas</strong>, <strong>reparaciones de llantas</strong> y nuestra exclusiva herramienta
+                <strong>Tito's TreadMatch OKC</strong> para ayudarle a encontrar las llantas perfectas para su vehículo.
+            </p>
+            <p class="hero-address">
+                Ubicados convenientemente en <strong>1305 Northwest 30th Street, Oklahoma City</strong>,
+                estamos aquí para servirle con servicios de calidad y precios competitivos.
+            </p>
+        </div>
+        <div class="hero-buttons">
+            <button class="cta-button" onclick="location.href='services_es.html'">Explorar Nuestros Servicios</button>
+            <button class="cta-button secondary" onclick="location.href='contact_es.html'">Contáctenos</button>
+        </div>
     </section>
 
     <!-- Sección de Servicios -->
@@ -76,28 +101,30 @@
                 <p>Instalación profesional de llantas nuevas y usadas para garantizar su seguridad en la carretera.</p>
             </div>
             <div class="service-item">
-                <h3>⚙️ Reparaciones de Llantas</h3>
-                <p>Parches y tapones asequibles desde solo $7. Lo mantenemos rodando con seguridad.</p>
+                <h3>⚙️ Reparación de Llantas</h3>
+                <p>Parcheos y tapones económicos desde solo $7. Lo mantenemos rodando con seguridad.</p>
             </div>
             <div class="service-item">
                 <h3>🚗 Balanceo de Llantas</h3>
-                <p>Balanceo y alineación precisos para un manejo más suave y eficiente en combustible.</p>
+                <p>Balanceo y alineación precisos para un viaje más suave y eficiente en combustible.</p>
             </div>
             <div class="service-item">
                 <h3>🌟 Servicios de Frenos</h3>
-                <p>Mantenimiento y reparaciones completas de frenos para mantenerlo seguro en la carretera.</p>
+                <p>Mantenimiento y reparaciones integrales de frenos para mantenerlo seguro en la carretera.</p>
             </div>
-		</div> <br>
-        <button class="cta-button" onclick="location.href='services_es.html'">Aprender Más</button>
+        </div>
+        <br>
+        <button class="cta-button" onclick="location.href='services_es.html'">Aprenda Más</button>
     </section>
 
     <!-- Pie de Página -->
     <footer>
-        <p>&copy; 2024 Tito's Tire Shop. Todos los derechos reservados.</p>
-        <p>
-            <strong>Dirección:</strong> 1305 Northwest 30th Street, Oklahoma City, OK 73118 <br>
-            <strong>Horarios:</strong> Lun-Vie: 9 AM - 7 PM, Sáb: 9 AM - 6 PM, Dom: Cerrado
-        </p>
+        <address>
+            <p>
+                <strong>Dirección:</strong> 1305 Northwest 30th Street, Oklahoma City, OK 73118 <br>
+                <strong>Horario:</strong> Lun-Vie: 9 AM - 7 PM, Sáb: 9 AM - 6 PM, Dom: Cerrado
+            </p>
+        </address>
         <nav class="legal-links">
             <a href="legal/terms_es.html">Términos y Condiciones</a>
             <a href="legal/privacy_es.html">Política de Privacidad</a>
