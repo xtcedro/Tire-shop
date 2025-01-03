@@ -1009,12 +1009,15 @@ html {
     }
 }
 
+/* Gallery Section */
 .gallery-section {
     text-align: center;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #1C1C1C; /* Dark gray for the background */
+    color: #FFCC00; /* Gold for text */
 }
 
+/* Gallery Container */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -1022,23 +1025,34 @@ html {
     gap: 1.5rem;
 }
 
+/* Gallery Item */
 .gallery-item {
     width: 300px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 2px solid #FF4500; /* Bright orange for borders */
     border-radius: 8px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #1C1C1C; /* Match dark background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Gallery Item Image */
 .gallery-item img {
     width: 100%;
     height: auto;
+    border-bottom: 2px solid #FF4500; /* Orange divider below image */
 }
 
+/* Gallery Item Text */
 .gallery-item p {
     padding: 1rem;
     font-size: 1rem;
-    color: #333;
+    color: #FFCC00; /* Gold for text */
+    font-weight: bold; /* Bold for emphasis */
 }
