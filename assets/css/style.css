@@ -1017,6 +1017,21 @@ html {
     color: #FFCC00; /* Gold for text */
 }
 
+.gallery-section h2 {
+    font-size: 2rem; /* Larger font size for headings */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #FF4500; /* Bright orange for emphasis */
+    text-transform: uppercase; /* For a professional look */
+    letter-spacing: 1px;
+}
+
+.gallery-section p {
+    font-size: 1.2rem; /* Slightly larger for better readability */
+    color: #FFCC00; /* Gold for consistency */
+    margin-bottom: 2rem; /* Add spacing below paragraph */
+}
+
 /* Gallery Container */
 .gallery-container {
     display: flex;
