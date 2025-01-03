@@ -6,30 +6,58 @@
     <meta name="description" content="Tito's Tire Shop offers quality tire services and products, including new and used tires, tire repairs, and a unique tire recommendation tool in Oklahoma City.">
     <title>Home - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script>
-        function setLanguage(lang) {
-            if (lang === 'es') {
-                window.location.href = 'index_es.html'; // Redirect to Spanish version
-            } else {
-                document.getElementById('language-modal').style.display = 'none';
-            }
+  <script>
+    // Language Selection Modal Logic
+    function setLanguage(lang) {
+        if (lang === 'es') {
+            window.location.href = 'index_es.html';
+        } else if (lang === 'en') {
+            window.location.href = 'index.html';
         }
-    </script>
+    }
+
+    function closeModal() {
+        document.getElementById('language-modal').style.display = 'none';
+    }
+</script>
+
+
+
+<script>
+    // Toggle the language selection
+    function toggleLanguage() {
+        const isChecked = document.getElementById('language-switch').checked;
+        const languageText = document.getElementById('language-text');
+        if (isChecked) {
+            languageText.textContent = 'Español';
+            setLanguage('es');
+        } else {
+            languageText.textContent = 'English';
+            setLanguage('en');
+        }
+    }
+
+    // Ensure modal shows on every visit
+    window.onload = function () {
+        document.getElementById('language-modal').style.display = 'flex';
+    };
+</script>
 </head>
 
+  
 <body>
     <!-- Language Selection Modal -->
     <div id="language-modal" class="modal">
         <div class="modal-content">
-            <h2>Language / Idioma</h2>
+            <h2>Please Select a Language / Por Favor Seleccione un Idioma</h2>
             <div class="language-options">
-                <button onclick="setLanguage('en')">
-                    <img src="assets/images/us-flag.png" alt="English" class="flag-icon"> English
-                </button>
-                <button onclick="setLanguage('es')">
-                    <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon"> Español
-                </button>
+                <label class="switch">
+                    <input type="checkbox" id="language-switch" onclick="toggleLanguage()">
+                    <span class="slider"></span>
+                </label>
+                <p id="language-text">English</p>
             </div>
+            <button class="close-button" onclick="closeModal()">×</button>
         </div>
     </div>
 
