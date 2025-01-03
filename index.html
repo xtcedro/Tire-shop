@@ -42,19 +42,20 @@
 
 <body>
     <!-- Language Selection Modal -->
-    <div id="language-modal" class="modal">
-        <div class="modal-content">
-            <h2>Please Select a Language / Por Favor Seleccione un Idioma</h2>
-            <div class="language-options">
-                <label class="switch">
-                    <input type="checkbox" id="language-switch" onclick="toggleLanguage()">
-                    <span class="slider"></span>
-                </label>
-                <p id="language-text">English</p>
-            </div>
-            <button class="close-button" onclick="closeModal()">×</button>
+<div id="language-modal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeModal()">×</button>
+        <h2>Language / Idioma</h2>
+        <div class="language-options">
+            <button onclick="setLanguage('en')">
+                <img src="assets/images/us-flag.png" alt="English" class="flag-icon"> English
+            </button>
+            <button onclick="setLanguage('es')">
+                <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon"> Español
+            </button>
         </div>
     </div>
+</div>
 
     <!-- Header Section -->
     <header>
