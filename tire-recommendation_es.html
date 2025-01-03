@@ -3,12 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Encuentre las llantas perfectas para su vehículo con Tito's TreadMatch OKC, una herramienta personalizada de recomendación de llantas.">
+    <meta name="description" content="Encuentra las llantas perfectas para tu vehículo con Tito's TreadMatch OKC, una herramienta personalizada de recomendación de llantas.">
     <title>Tito's TreadMatch OKC - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('tire-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Evita el envío del formulario
+                const vehicleType = document.getElementById('vehicle-type').value;
+                const drivingCondition = document.getElementById('driving-condition').value;
+                const budget = document.getElementById('budget').value;
+
+                const recommendations = {
+                    sedan: {
+                        highway: {
+                            economy: "Llantas Económicas para Conducción en Carretera",
+                            "mid-range": "Llantas Todo Clima de Rango Medio para Confort y Durabilidad",
+                            premium: "Llantas de Rendimiento Premium para Máxima Eficiencia"
+                        },
+                        city: {
+                            economy: "Llantas Económicas para Tráfico Urbano",
+                            "mid-range": "Llantas Todo Clima de Rango Medio para Versatilidad",
+                            premium: "Llantas de Bajo Ruido Premium para Confort Urbano"
+                        },
+                        "all-weather": {
+                            economy: "Llantas Económicas Todo Clima para Uso Diario",
+                            "mid-range": "Llantas Todo Clima de Rango Medio para Rendimiento Anual",
+                            premium: "Llantas Todo Clima Premium para Máxima Seguridad"
+                        }
+                    },
+                    suv: {
+                        "off-road": {
+                            economy: "Llantas Económicas para Terrenos Irregulares",
+                            "mid-range": "Llantas Todo Terreno de Rango Medio para Aventuras Ligeras",
+                            premium: "Llantas de Alto Rendimiento para Terrenos Difíciles"
+                        },
+                        highway: {
+                            economy: "Llantas Económicas para SUVs en Carretera",
+                            "mid-range": "Llantas Todo Clima para SUVs de Rango Medio",
+                            premium: "Llantas Silenciosas Premium para SUVs"
+                        },
+                        "all-weather": {
+                            economy: "Llantas Económicas Todo Clima para SUVs",
+                            "mid-range": "Llantas Todo Clima de Rango Medio para Uso Balanceado",
+                            premium: "Llantas de Alta Durabilidad para Todas las Condiciones"
+                        }
+                    },
+                    truck: {
+                        highway: {
+                            economy: "Llantas Económicas para Cargas Ligeras",
+                            "mid-range": "Llantas de Rango Medio para Estabilidad",
+                            premium: "Llantas Premium para Máxima Eficiencia en Carretera"
+                        },
+                        "off-road": {
+                            economy: "Llantas Económicas para Uso Todo Terreno Ocasional",
+                            "mid-range": "Llantas Todo Terreno de Rango Medio para Rutas Frecuentes",
+                            premium: "Llantas Pesadas Todo Terreno de Alto Rendimiento"
+                        }
+                    },
+                    sports: {
+                        highway: {
+                            economy: "Llantas Económicas de Rendimiento para Conducción Deportiva",
+                            "mid-range": "Llantas Deportivas de Rango Medio para Versatilidad",
+                            premium: "Llantas de Alto Rendimiento para Máxima Velocidad"
+                        },
+                        "all-weather": {
+                            economy: "Llantas Todo Clima de Rendimiento Económico",
+                            "mid-range": "Llantas Deportivas Todo Clima de Rango Medio",
+                            premium: "Llantas Premium Todo Clima para Alto Rendimiento"
+                        }
+                    },
+                    "off-road": {
+                        "off-road": {
+                            economy: "Llantas Económicas para Aventuras Todo Terreno",
+                            "mid-range": "Llantas Todo Terreno de Rango Medio para Rutas Versátiles",
+                            premium: "Llantas para Terrenos Extremos de Alto Rendimiento"
+                        }
+                    }
+                };
+
+                // Verifica si hay una recomendación válida
+                const recommendation =
+                    recommendations[vehicleType]?.[drivingCondition]?.[budget] ||
+                    "Por favor, selecciona opciones válidas para una recomendación.";
+
+                document.getElementById('recommendation-result').innerText = recommendation;
+
+                // Muestra el modal
+                document.getElementById('recommendation-modal').style.display = 'block';
+            });
+        });
+
+        function closeModal() {
+            document.getElementById('recommendation-modal').style.display = 'none';
+        }
+    </script>
 </head>
+
 <body>
-    <!-- Sección del Encabezado -->
+    <!-- Sección de Encabezado -->
     <header>
         <h1 class="header-title">Tito's Tire Shop</h1>
         <div class="title-banner">
@@ -16,41 +109,40 @@
         </div>
     </header>
 
-    <!-- Navegación en Escritorio -->
+    <!-- Navegación de Escritorio -->
     <nav class="desktop-nav">
         <a href="index_es.html">Inicio</a>
         <a href="about_es.html">Sobre Nosotros</a>
         <a href="services_es.html">Servicios</a>
         <a href="gallery_es.html">Galería</a>
         <a href="tire-recommendation_es.html" class="active">Tito's TreadMatch OKC</a>
-        <a href="contact_es.html">Contáctenos</a>
+        <a href="contact_es.html">Contáctanos</a>
     </nav>
 
     <!-- Sección Hero -->
-    <section class="offers-section-alt">
-        <h1 class="offers-title-alt">Tito's TreadMatch OKC</h1>
-        <p class="offers-description-alt">Encuentre las llantas perfectas para su vehículo en solo unos clics.</p>
+    <section class="offers-section">
+        <h1 class="offers-title">Tito's TreadMatch OKC</h1>
+        <p class="offers-description">Encuentra las llantas perfectas para tu vehículo en solo unos clics.</p>
     </section>
 
     <!-- Herramienta de Recomendación de Llantas -->
-    <section class="offers-section-alt">
-        <h2 class="offers-title-alt">Recomendaciones Personalizadas de Llantas</h2>
-        <p class="offers-description-alt">Responda algunas preguntas rápidas y le recomendaremos las mejores llantas para su vehículo y sus necesidades de conducción.</p>
+    <section class="offers-section">
+        <h2 class="offers-title">Recomendaciones Personalizadas de Llantas</h2>
         <form id="tire-form">
             <label for="vehicle-type">Tipo de Vehículo:</label>
             <select id="vehicle-type" name="vehicle_type" required>
-                <option value="">Seleccione el Tipo de Vehículo</option>
+                <option value="">Selecciona el Tipo de Vehículo</option>
                 <option value="sedan">Sedán</option>
                 <option value="suv">SUV</option>
                 <option value="truck">Camioneta</option>
-                <option value="sports">Deportivo</option>
+                <option value="sports">Auto Deportivo</option>
                 <option value="off-road">Todo Terreno</option>
             </select>
 
             <label for="driving-condition">Condiciones de Conducción:</label>
             <select id="driving-condition" name="driving_condition" required>
-                <option value="">Seleccione las Condiciones de Conducción</option>
-                <option value="highway">Autopista</option>
+                <option value="">Selecciona las Condiciones de Conducción</option>
+                <option value="highway">Carretera</option>
                 <option value="city">Ciudad</option>
                 <option value="off-road">Todo Terreno</option>
                 <option value="all-weather">Todo Clima</option>
@@ -58,23 +150,24 @@
 
             <label for="budget">Rango de Presupuesto:</label>
             <select id="budget" name="budget" required>
-                <option value="">Seleccione el Rango de Presupuesto</option>
+                <option value="">Selecciona el Rango de Presupuesto</option>
                 <option value="economy">Económico</option>
                 <option value="mid-range">Intermedio</option>
                 <option value="premium">Premium</option>
             </select>
 
-            <button type="submit" class="cta-button-alt">Obtener Recomendaciones</button>
+            <button type="submit" class="cta-button">Obtener Recomendaciones</button>
         </form>
-        <!-- Modal de Resultados -->
-        <div id="recommendation-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal()">×</span>
-                <h2>Llantas Recomendadas</h2>
-                <p id="recommendation-result"></p>
-            </div>
-        </div>
     </section>
+
+    <!-- Modal de Recomendaciones -->
+    <div id="recommendation-modal" class="modal">
+        <div class="modal-content">
+            <h2>Tu Recomendación de Llantas</h2>
+            <p id="recommendation-result"></p>
+            <button onclick="closeModal()" class="cta-button">Cerrar</button>
+        </div>
+    </div>
 
     <!-- Pie de Página -->
     <footer>
@@ -93,32 +186,5 @@
             <a href="legal/cookies_es.html">Política de Cookies</a>
         </nav>
     </footer>
-
-    <script>
-        document.getElementById('tire-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evitar envío de formulario
-            const vehicleType = document.getElementById('vehicle-type').value;
-            const drivingCondition = document.getElementById('driving-condition').value;
-            const budget = document.getElementById('budget').value;
-
-            const recommendations = {
-                sedan: "Llantas Todo Clima Económicas",
-                suv: "Llantas Todo Terreno de Rango Intermedio",
-                truck: "Llantas Resistentes Premium",
-                sports: "Llantas de Alto Rendimiento para Deportivos",
-                "off-road": "Llantas Rugosas para Todo Terreno"
-            };
-
-            let recommendation = recommendations[vehicleType] || "Por favor seleccione opciones válidas.";
-            document.getElementById('recommendation-result').innerText = recommendation;
-
-            // Mostrar modal
-            document.getElementById('recommendation-modal').style.display = 'block';
-        });
-
-        function closeModal() {
-            document.getElementById('recommendation-modal').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
