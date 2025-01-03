@@ -6,42 +6,17 @@
     <meta name="description" content="Find the perfect tires for your vehicle with Tito's TreadMatch OKC, a personalized tire recommendation tool.">
     <title>Tito's TreadMatch OKC - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* #recommendation-result styles */
-        #recommendation-result {
-            display: none;
-            text-align: center;
-            background-color: #1C1C1C;
-            color: #FFCC00;
-            padding: 2rem;
-            margin-top: 2rem;
-            border: 2px solid #FF4500;
-            border-radius: 8px;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
-
 <body>
+    <!-- Header Section -->
     <header>
         <h1 class="header-title">Tito's Tire Shop</h1>
         <div class="title-banner">
-            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop">
+            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop - Oklahoma City">
         </div>
     </header>
 
+    <!-- Desktop Navigation -->
     <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -51,11 +26,13 @@
         <a href="contact.html">Contact Us</a>
     </nav>
 
+    <!-- Hero Section -->
     <section class="offers-section-alt">
         <h1 class="offers-title-alt">Tito's TreadMatch OKC</h1>
         <p class="offers-description-alt">Find the perfect tires for your vehicle in just a few clicks.</p>
     </section>
 
+    <!-- Tire Recommendation Tool -->
     <section class="offers-section-alt">
         <h2 class="offers-title-alt">Personalized Tire Recommendations</h2>
         <p class="offers-description-alt">Answer a few quick questions, and we'll recommend the best tires for your vehicle and driving needs.</p>
@@ -72,7 +49,7 @@
 
             <label for="driving-condition">Driving Conditions:</label>
             <select id="driving-condition" name="driving_condition" required>
-                <option value="">Select Driving Conditions</option>
+                <option value="">Select Driving Condition</option>
                 <option value="highway">Highway</option>
                 <option value="city">City</option>
                 <option value="off-road">Off-Road</option>
@@ -89,9 +66,17 @@
 
             <button type="submit" class="cta-button-alt">Get Recommendations</button>
         </form>
-        <div id="recommendation-result"></div>
+        <!-- Recommendation Result Modal -->
+        <div id="recommendation-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">×</span>
+                <h2>Recommended Tires</h2>
+                <p id="recommendation-result"></p>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Tito's Tire Shop. All rights reserved.</p>
         <p>
@@ -110,25 +95,30 @@
     </footer>
 
     <script>
-        document.getElementById("tire-form").addEventListener("submit", function (event) {
-            event.preventDefault();
+        document.getElementById('tire-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const vehicleType = document.getElementById('vehicle-type').value;
+            const drivingCondition = document.getElementById('driving-condition').value;
+            const budget = document.getElementById('budget').value;
 
-            const vehicleType = document.getElementById("vehicle-type").value;
-            const drivingCondition = document.getElementById("driving-condition").value;
-            const budget = document.getElementById("budget").value;
+            const recommendations = {
+                sedan: "Economy All-Season Tires",
+                suv: "Mid-Range All-Terrain Tires",
+                truck: "Premium Heavy-Duty Tires",
+                sports: "High-Performance Sport Tires",
+                "off-road": "Rugged Off-Road Tires"
+            };
 
-            let recommendation = "Visit us for personalized tire recommendations!";
+            let recommendation = recommendations[vehicleType] || "Please select valid options.";
+            document.getElementById('recommendation-result').innerText = recommendation;
 
-            if (vehicleType === "sedan" && drivingCondition === "highway" && budget === "economy") {
-                recommendation = "Economy tires for highway use in sedans.";
-            } else if (vehicleType === "suv" && drivingCondition === "off-road" && budget === "premium") {
-                recommendation = "Premium tires for SUVs on rugged terrain.";
-            }
-
-            const resultDiv = document.getElementById("recommendation-result");
-            resultDiv.innerHTML = `<h3>Recommended Tires:</h3><p>${recommendation}</p>`;
-            resultDiv.style.display = "block";
+            // Display modal
+            document.getElementById('recommendation-modal').style.display = 'block';
         });
+
+        function closeModal() {
+            document.getElementById('recommendation-modal').style.display = 'none';
+        }
     </script>
 </body>
 </html>
