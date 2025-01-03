@@ -7,7 +7,7 @@
     <title>Home - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
-        // Language Selection and Modal Logic
+        // Language Selection Modal Logic
         function setLanguage(lang) {
             if (lang === 'es') {
                 window.location.href = 'index_es.html';
@@ -16,6 +16,16 @@
             }
         }
 
+        function closeModal() {
+            document.getElementById('language-modal').style.display = 'none';
+        }
+
+        // Ensure modal shows on every visit
+        window.onload = function () {
+            document.getElementById('language-modal').style.display = 'flex';
+        };
+
+        // Toggle the language selection
         function toggleLanguage() {
             const isChecked = document.getElementById('language-switch').checked;
             const languageText = document.getElementById('language-text');
@@ -27,14 +37,6 @@
                 setLanguage('en');
             }
         }
-
-        function closeModal() {
-            document.getElementById('language-modal').style.display = 'none';
-        }
-
-        window.onload = function () {
-            document.getElementById('language-modal').style.display = 'flex';
-        };
     </script>
 </head>
 
@@ -50,7 +52,7 @@
                 </label>
                 <p id="language-text">English</p>
             </div>
-            <button class="close-button" onclick="closeModal()" aria-label="Close language selection modal">×</button>
+            <button class="close-button" onclick="closeModal()">×</button>
         </div>
     </div>
 
@@ -58,7 +60,7 @@
     <header>
         <h1 class="header-title">Tito's Tire Shop</h1>
         <div class="title-banner">
-            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop Banner">
+            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop">
         </div>
     </header>
 
@@ -75,21 +77,17 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <h1 class="hero-title">Welcome to Tito's Tire Shop - Your Trusted Tire Experts in Oklahoma City</h1>
-        <div class="hero-content">
-            <p>
-                At <strong>Tito's Tire Shop</strong>, we offer exceptional tire services, including
-                <strong>new and used tire sales</strong>, <strong>tire repairs</strong>, and our exclusive
-                <strong>Tito's TreadMatch OKC</strong> tool to help you find the perfect tires for your vehicle.
-            </p>
-            <p class="hero-address">
-                Conveniently located at <strong>1305 Northwest 30th Street, Oklahoma City</strong>,
-                we’re here to serve you with quality service and competitive prices.
-            </p>
-        </div>
-        <div class="hero-buttons">
-            <button class="cta-button" onclick="location.href='services.html'">Explore Our Services</button>
-            <button class="cta-button secondary" onclick="location.href='contact.html'">Get in Touch</button>
-        </div>
+        <p>
+            At <strong>Tito's Tire Shop</strong>, we offer exceptional tire services, including
+            <strong>new and used tire sales</strong>, <strong>tire repairs</strong>, and our exclusive
+            <strong>Tito's TreadMatch OKC</strong> tool to help you find the perfect tires for your vehicle.
+        </p>
+        <p class="hero-address">
+            Conveniently located at <strong>1305 Northwest 30th Street, Oklahoma City</strong>,
+            we’re here to serve you with quality service and competitive prices.
+        </p>
+        <button class="cta-button" onclick="location.href='services.html'">Explore Our Services</button>
+        <button class="cta-button secondary" onclick="location.href='contact.html'">Get in Touch</button>
     </section>
 
     <!-- Services Section -->
@@ -112,19 +110,17 @@
                 <h3>🌟 Brake Services</h3>
                 <p>Comprehensive brake maintenance and repairs to keep you safe on the road.</p>
             </div>
-        </div>
-        <br>
+        </div> <br>
         <button class="cta-button" onclick="location.href='services.html'">Learn More</button>
     </section>
 
     <!-- Footer -->
     <footer>
-        <address>
-            <p>
-                <strong>Address:</strong> 1305 Northwest 30th Street, Oklahoma City, OK 73118 <br>
-                <strong>Hours:</strong> Mon-Fri: 9 AM - 7 PM, Sat: 9 AM - 6 PM, Sun: Closed
-            </p>
-        </address>
+        <p>&copy; 2024 Tito's Tire Shop. All rights reserved.</p>
+        <p>
+            <strong>Address:</strong> 1305 Northwest 30th Street, Oklahoma City, OK 73118 <br>
+            <strong>Hours:</strong> Mon-Fri: 9 AM - 7 PM, Sat: 9 AM - 6 PM, Sun: Closed
+        </p>
         <nav class="legal-links">
             <a href="legal/terms.html">Terms and Conditions</a>
             <a href="legal/privacy.html">Privacy Policy</a>
