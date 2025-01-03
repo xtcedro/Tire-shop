@@ -1198,10 +1198,26 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Modal Content */
+/* Modal Structure */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
 .modal-content {
-    background-color: #1C1C1C; /* Dark gray */
-    color: #FFCC00; /* Gold text */
+    position: relative; /* To position the close button inside the modal content */
+    background-color: #001f3f; /* Dark navy blue */
+    color: #FFFFFF; /* White text */
     padding: 2rem;
     text-align: center;
     border-radius: 10px;
@@ -1211,13 +1227,22 @@ footer {
     font-size: 1.5rem;
 }
 
-/* Modal Title */
-.modal-content h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    background: linear-gradient(135deg, #FF4500, #FF3300, #FF6600); /* Orange gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+    background: none;
+    border: none;
+    font-size: 2rem; /* Larger for visibility */
+    color: #FFFFFF; /* White text */
+    cursor: pointer; /* Show pointer on hover */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+    color: #FF6600; /* Highlight color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
 }
 
 /* Language Options */
@@ -1228,12 +1253,11 @@ footer {
     margin-top: 1rem;
 }
 
-/* Language Buttons */
 .language-options button {
-    background-color: #2B2B2B; /* Slightly lighter dark gray */
-    color: #FFCC00; /* Gold text */
+    background-color: #003366; /* Slightly lighter blue */
+    color: #FFFFFF; /* White text */
     padding: 1rem 1.5rem;
-    border: 2px solid #FF4500; /* Orange border */
+    border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -1245,10 +1269,9 @@ footer {
     font-weight: bold;
 }
 
-/* Hover Effect for Buttons */
 .language-options button:hover {
-    background-color: #FF6600; /* Bright orange hover effect */
-    color: #1C1C1C; /* Dark gray text on hover */
+    background-color: #FFD700; /* Gold hover effect */
+    color: #001f3f; /* Dark blue text on hover */
     transform: scale(1.05); /* Slight zoom */
 }
 
@@ -1258,21 +1281,4 @@ footer {
     height: 32px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for flags */
-}
-
-/* Close Button */
-.close-button {
-    background: none;
-    border: none;
-    color: #FF6600; /* Bright orange */
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.close-button:hover {
-    color: #FF3300; /* Brighter red-orange */
-    transform: scale(1.1); /* Slight zoom effect */
 }
