@@ -1071,3 +1071,24 @@ html {
     color: #FFCC00; /* Gold for text */
     font-weight: bold; /* Bold for emphasis */
 }
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem; /* Larger size for emphasis */
+    font-weight: bold;
+    color: #FF4500; /* Bright orange for headings */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase; /* Professional uppercase styling */
+    letter-spacing: 1.2px; /* Adds spacing between letters for readability */
+}
+
+/* Section Intro */
+.section-intro {
+    font-size: 1.2rem; /* Slightly larger for better readability */
+    color: #FFCC00; /* Gold for complementary contrast */
+    margin-bottom: 2rem; /* Adds spacing below paragraph */
+    line-height: 1.6; /* Improves readability */
+    max-width: 800px; /* Keeps text in a readable width */
+    margin-left: auto;
+    margin-right: auto;
+}
