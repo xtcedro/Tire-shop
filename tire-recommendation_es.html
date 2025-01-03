@@ -6,42 +6,17 @@
     <meta name="description" content="Encuentre las llantas perfectas para su vehículo con Tito's TreadMatch OKC, una herramienta personalizada de recomendación de llantas.">
     <title>Tito's TreadMatch OKC - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* #recommendation-result styles */
-        #recommendation-result {
-            display: none;
-            text-align: center;
-            background-color: #1C1C1C;
-            color: #FFCC00;
-            padding: 2rem;
-            margin-top: 2rem;
-            border: 2px solid #FF4500;
-            border-radius: 8px;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
-
 <body>
+    <!-- Sección del Encabezado -->
     <header>
         <h1 class="header-title">Tito's Tire Shop</h1>
         <div class="title-banner">
-            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop">
+            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop - Oklahoma City">
         </div>
     </header>
 
+    <!-- Navegación en Escritorio -->
     <nav class="desktop-nav">
         <a href="index_es.html">Inicio</a>
         <a href="about_es.html">Sobre Nosotros</a>
@@ -51,11 +26,13 @@
         <a href="contact_es.html">Contáctenos</a>
     </nav>
 
+    <!-- Sección Hero -->
     <section class="offers-section-alt">
         <h1 class="offers-title-alt">Tito's TreadMatch OKC</h1>
         <p class="offers-description-alt">Encuentre las llantas perfectas para su vehículo en solo unos clics.</p>
     </section>
 
+    <!-- Herramienta de Recomendación de Llantas -->
     <section class="offers-section-alt">
         <h2 class="offers-title-alt">Recomendaciones Personalizadas de Llantas</h2>
         <p class="offers-description-alt">Responda algunas preguntas rápidas y le recomendaremos las mejores llantas para su vehículo y sus necesidades de conducción.</p>
@@ -89,9 +66,17 @@
 
             <button type="submit" class="cta-button-alt">Obtener Recomendaciones</button>
         </form>
-        <div id="recommendation-result"></div>
+        <!-- Modal de Resultados -->
+        <div id="recommendation-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">×</span>
+                <h2>Llantas Recomendadas</h2>
+                <p id="recommendation-result"></p>
+            </div>
+        </div>
     </section>
 
+    <!-- Pie de Página -->
     <footer>
         <p>&copy; 2024 Tito's Tire Shop. Todos los derechos reservados.</p>
         <p>
@@ -110,25 +95,30 @@
     </footer>
 
     <script>
-        document.getElementById("tire-form").addEventListener("submit", function (event) {
-            event.preventDefault();
+        document.getElementById('tire-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar envío de formulario
+            const vehicleType = document.getElementById('vehicle-type').value;
+            const drivingCondition = document.getElementById('driving-condition').value;
+            const budget = document.getElementById('budget').value;
 
-            const vehicleType = document.getElementById("vehicle-type").value;
-            const drivingCondition = document.getElementById("driving-condition").value;
-            const budget = document.getElementById("budget").value;
+            const recommendations = {
+                sedan: "Llantas Todo Clima Económicas",
+                suv: "Llantas Todo Terreno de Rango Intermedio",
+                truck: "Llantas Resistentes Premium",
+                sports: "Llantas de Alto Rendimiento para Deportivos",
+                "off-road": "Llantas Rugosas para Todo Terreno"
+            };
 
-            let recommendation = "¡Visítenos para obtener recomendaciones personalizadas de llantas!";
+            let recommendation = recommendations[vehicleType] || "Por favor seleccione opciones válidas.";
+            document.getElementById('recommendation-result').innerText = recommendation;
 
-            if (vehicleType === "sedan" && drivingCondition === "highway" && budget === "economy") {
-                recommendation = "Llantas económicas para sedanes en autopistas.";
-            } else if (vehicleType === "suv" && drivingCondition === "off-road" && budget === "premium") {
-                recommendation = "Llantas premium para SUVs en terrenos difíciles.";
-            }
-
-            const resultDiv = document.getElementById("recommendation-result");
-            resultDiv.innerHTML = `<h3>Llantas Recomendadas:</h3><p>${recommendation}</p>`;
-            resultDiv.style.display = "block";
+            // Mostrar modal
+            document.getElementById('recommendation-modal').style.display = 'block';
         });
+
+        function closeModal() {
+            document.getElementById('recommendation-modal').style.display = 'none';
+        }
     </script>
 </body>
 </html>
