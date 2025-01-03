@@ -6,7 +6,100 @@
     <meta name="description" content="Find the perfect tires for your vehicle with Tito's TreadMatch OKC, a personalized tire recommendation tool.">
     <title>Tito's TreadMatch OKC - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('tire-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form submission
+                const vehicleType = document.getElementById('vehicle-type').value;
+                const drivingCondition = document.getElementById('driving-condition').value;
+                const budget = document.getElementById('budget').value;
+
+                const recommendations = {
+                    sedan: {
+                        highway: {
+                            economy: "Economy Touring Tires for Smooth Highway Drives",
+                            "mid-range": "Mid-Range All-Season Tires for Comfort and Durability",
+                            premium: "Premium Performance Tires for Maximum Efficiency"
+                        },
+                        city: {
+                            economy: "Budget City Tires for Stop-and-Go Traffic",
+                            "mid-range": "Mid-Range All-Season Tires for Versatility",
+                            premium: "Premium Low-Noise Tires for Urban Comfort"
+                        },
+                        "all-weather": {
+                            economy: "Economy All-Weather Tires for Daily Use",
+                            "mid-range": "Mid-Range All-Weather Tires for Year-Round Performance",
+                            premium: "Premium All-Season Touring Tires for Maximum Safety"
+                        }
+                    },
+                    suv: {
+                        "off-road": {
+                            economy: "Budget Off-Road Tires for Occasional Trails",
+                            "mid-range": "Mid-Range All-Terrain Tires for Light Adventures",
+                            premium: "Premium Mud-Terrain Tires for Rugged Trails"
+                        },
+                        highway: {
+                            economy: "Economy SUV Tires for Smooth Highway Performance",
+                            "mid-range": "Mid-Range All-Season Tires for SUVs",
+                            premium: "Premium Quiet-Tread Tires for SUVs"
+                        },
+                        "all-weather": {
+                            economy: "Economy All-Weather Tires for SUVs",
+                            "mid-range": "Mid-Range All-Season Tires for Balanced Use",
+                            premium: "Premium High-Durability Tires for All Conditions"
+                        }
+                    },
+                    truck: {
+                        highway: {
+                            economy: "Budget Truck Tires for Light Loads",
+                            "mid-range": "Mid-Range Load-Bearing Tires for Stability",
+                            premium: "Premium Long-Haul Tires for Maximum Efficiency"
+                        },
+                        "off-road": {
+                            economy: "Economy Rugged Tires for Occasional Off-Roading",
+                            "mid-range": "Mid-Range Mud-Terrain Tires for Frequent Trails",
+                            premium: "Premium Heavy-Duty All-Terrain Tires"
+                        }
+                    },
+                    sports: {
+                        highway: {
+                            economy: "Budget Performance Tires for Sporty Highway Drives",
+                            "mid-range": "Mid-Range Sport Tires for Versatile Performance",
+                            premium: "High-Performance Racing Tires for Maximum Speed"
+                        },
+                        "all-weather": {
+                            economy: "Economy All-Weather Performance Tires",
+                            "mid-range": "Mid-Range Sport Touring Tires",
+                            premium: "Premium All-Season Performance Tires"
+                        }
+                    },
+                    "off-road": {
+                        "off-road": {
+                            economy: "Budget Off-Road Tires for Occasional Adventures",
+                            "mid-range": "Mid-Range All-Terrain Tires for Versatile Trails",
+                            premium: "Premium Extreme-Terrain Tires for Serious Off-Roading"
+                        }
+                    }
+                };
+
+                // Check for a valid recommendation
+                const recommendation =
+                    recommendations[vehicleType]?.[drivingCondition]?.[budget] ||
+                    "Please select valid options for a recommendation.";
+
+                document.getElementById('recommendation-result').innerText = recommendation;
+
+                // Display modal
+                document.getElementById('recommendation-modal').style.display = 'block';
+            });
+        });
+
+        function closeModal() {
+            document.getElementById('recommendation-modal').style.display = 'none';
+        }
+    </script>
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
@@ -27,15 +120,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="offers-section-alt">
-        <h1 class="offers-title-alt">Tito's TreadMatch OKC</h1>
-        <p class="offers-description-alt">Find the perfect tires for your vehicle in just a few clicks.</p>
+    <section class="offers-section">
+        <h1 class="offers-title">Tito's TreadMatch OKC</h1>
+        <p class="offers-description">Find the perfect tires for your vehicle in just a few clicks.</p>
     </section>
 
     <!-- Tire Recommendation Tool -->
-    <section class="offers-section-alt">
-        <h2 class="offers-title-alt">Personalized Tire Recommendations</h2>
-        <p class="offers-description-alt">Answer a few quick questions, and we'll recommend the best tires for your vehicle and driving needs.</p>
+    <section class="offers-section">
+        <h2 class="offers-title">Personalized Tire Recommendations</h2>
         <form id="tire-form">
             <label for="vehicle-type">Vehicle Type:</label>
             <select id="vehicle-type" name="vehicle_type" required>
@@ -64,17 +156,18 @@
                 <option value="premium">Premium</option>
             </select>
 
-            <button type="submit" class="cta-button-alt">Get Recommendations</button>
+            <button type="submit" class="cta-button">Get Recommendations</button>
         </form>
-        <!-- Recommendation Result Modal -->
-        <div id="recommendation-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-btn" onclick="closeModal()">×</span>
-                <h2>Recommended Tires</h2>
-                <p id="recommendation-result"></p>
-            </div>
-        </div>
     </section>
+
+    <!-- Recommendation Modal -->
+    <div id="recommendation-modal" class="modal">
+        <div class="modal-content">
+            <h2>Your Tire Recommendation</h2>
+            <p id="recommendation-result"></p>
+            <button onclick="closeModal()" class="cta-button">Close</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -93,32 +186,5 @@
             <a href="legal/cookies.html">Cookie Policy</a>
         </nav>
     </footer>
-
-    <script>
-        document.getElementById('tire-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-            const vehicleType = document.getElementById('vehicle-type').value;
-            const drivingCondition = document.getElementById('driving-condition').value;
-            const budget = document.getElementById('budget').value;
-
-            const recommendations = {
-                sedan: "Economy All-Season Tires",
-                suv: "Mid-Range All-Terrain Tires",
-                truck: "Premium Heavy-Duty Tires",
-                sports: "High-Performance Sport Tires",
-                "off-road": "Rugged Off-Road Tires"
-            };
-
-            let recommendation = recommendations[vehicleType] || "Please select valid options.";
-            document.getElementById('recommendation-result').innerText = recommendation;
-
-            // Display modal
-            document.getElementById('recommendation-modal').style.display = 'block';
-        });
-
-        function closeModal() {
-            document.getElementById('recommendation-modal').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
