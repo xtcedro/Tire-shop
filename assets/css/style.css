@@ -1092,3 +1092,99 @@ html {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Form Styles */
+form {
+    max-width: 600px; /* Restrict form width */
+    margin: 0 auto; /* Center the form */
+    padding: 1rem; /* Add some padding for spacing */
+    background-color: #1C1C1C; /* Match background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Label Styles */
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #FFCC00; /* Gold for text */
+    font-weight: bold;
+}
+
+/* Select and Input Styles */
+form select,
+form input {
+    width: 100%; /* Full width inside the form */
+    padding: 0.5rem; /* Reduce padding */
+    margin-bottom: 1rem;
+    border: 2px solid #FF4500; /* Orange border for emphasis */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #1C1C1C; /* Match form background */
+    color: #FFCC00; /* Gold for text */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover and Focus States */
+form select:hover,
+form select:focus,
+form input:hover,
+form input:focus {
+    border-color: #FFCC00; /* Highlight with gold on hover/focus */
+    outline: none;
+}
+
+/* Button Styles */
+form button {
+    width: 100%; /* Full-width button */
+    padding: 0.75rem; /* Balanced padding */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FF4500; /* Bright orange background */
+    color: #1C1C1C; /* Dark text for contrast */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active States for Button */
+form button:hover {
+    background-color: #FF3300; /* Darker orange for hover */
+    transform: scale(1.02); /* Slight zoom effect */
+}
+
+form button:active {
+    background-color: #FF2200; /* Even darker for active */
+    transform: scale(0.98); /* Slight shrink effect */
+}
+
+/* Spacing for Footer */
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #1C1C1C; /* Match site background */
+    color: #FFCC00; /* Gold text */
+}
+
+/* Overall Section Styles */
+.offers-section-alt {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.offers-section-alt h1,
+.offers-section-alt h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FF4500; /* Orange heading */
+    text-transform: uppercase;
+}
+
+.offers-section-alt p {
+    font-size: 1rem;
+    color: #FFCC00; /* Gold text */
+    margin-bottom: 1rem;
+}
