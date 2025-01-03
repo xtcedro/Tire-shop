@@ -118,8 +118,8 @@ nav a:hover {
 
 .modal-content {
     position: relative; /* To position the close button inside the modal content */
-    background-color: #001f3f; /* Dark navy blue */
-    color: #FFFFFF; /* White text */
+    background-color: #2B2B2B;
+    color: #FF8C00;
     padding: 2rem;
     text-align: center;
     border-radius: 10px;
