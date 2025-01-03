@@ -7,55 +7,31 @@
     <title>Home - Tito's Tire Shop</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
-        // Language Selection Modal Logic
         function setLanguage(lang) {
             if (lang === 'es') {
-                window.location.href = 'index_es.html';
-            } else if (lang === 'en') {
-                window.location.href = 'index.html';
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('language-modal').style.display = 'none';
-        }
-
-        // Ensure modal shows on every visit
-        window.onload = function () {
-            document.getElementById('language-modal').style.display = 'flex';
-        };
-
-        // Toggle the language selection
-        function toggleLanguage() {
-            const isChecked = document.getElementById('language-switch').checked;
-            const languageText = document.getElementById('language-text');
-            if (isChecked) {
-                languageText.textContent = 'Español';
-                setLanguage('es');
+                window.location.href = 'index_es.html'; // Redirect to Spanish version
             } else {
-                languageText.textContent = 'English';
-                setLanguage('en');
+                document.getElementById('language-modal').style.display = 'none';
             }
         }
     </script>
 </head>
 
 <body>
-  <!-- Language Selection Modal -->
-<div id="language-modal" class="modal">
-    <div class="modal-content">
-        <button class="close-button" onclick="closeModal()">×</button>
-        <h2>Language / Idioma</h2>
-        <div class="language-options">
-            <button onclick="setLanguage('en')">
-                <img src="assets/images/us-flag.png" alt="English" class="flag-icon"> English
-            </button>
-            <button onclick="setLanguage('es')">
-                <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon"> Español
-            </button>
+    <!-- Language Selection Modal -->
+    <div id="language-modal" class="modal">
+        <div class="modal-content">
+            <h2>Language / Idioma</h2>
+            <div class="language-options">
+                <button onclick="setLanguage('en')">
+                    <img src="assets/images/us-flag.png" alt="English" class="flag-icon"> English
+                </button>
+                <button onclick="setLanguage('es')">
+                    <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon"> Español
+                </button>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Header Section -->
     <header>
@@ -111,7 +87,7 @@
                 <h3>🌟 Brake Services</h3>
                 <p>Comprehensive brake maintenance and repairs to keep you safe on the road.</p>
             </div>
-        </div> <br>
+        </div>
         <button class="cta-button" onclick="location.href='services.html'">Learn More</button>
     </section>
 
