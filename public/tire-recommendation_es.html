@@ -3,189 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Encuentra las llantas perfectas para tu vehículo con Tito's TreadMatch OKC, una herramienta personalizada de recomendación de llantas.">
-    <title>Tito's TreadMatch OKC - Tito's Tire Shop</title>
+    <meta name="description" content="🔍 Encuentra las llantas perfectas para tu vehículo con Tito's TreadMatch OKC, una herramienta personalizada para recomendaciones de llantas. 🚗">
+    <title>🛞 Tito's TreadMatch OKC - Tito's Tire Shop 🚗</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById('tire-form').addEventListener('submit', function (event) {
-                event.preventDefault(); // Evita el envío del formulario
+            const form = document.getElementById("tire-form");
+            const modal = document.getElementById("recommendation-modal");
+            const result = document.getElementById("recommendation-result");
+            const closeButton = document.getElementById("close-modal");
 
-                const vehicleType = document.getElementById('vehicle-type').value;
-                const drivingCondition = document.getElementById('driving-condition').value;
-                const budget = document.getElementById('budget').value;
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const vehicleType = document.getElementById("vehicle-type").value;
+                const drivingCondition = document.getElementById("driving-condition").value;
+                const budget = document.getElementById("budget").value;
 
                 const recommendations = {
                     sedan: {
                         highway: {
-                            economy: "Llantas Económicas para Conducción en Carretera",
-                            "mid-range": "Llantas Todo Clima de Rango Medio para Confort y Durabilidad",
-                            premium: "Llantas de Rendimiento Premium para Máxima Eficiencia"
+                            economy: "🚗 Llantas Económicas para Conducción Suave en Carreteras",
+                            "mid-range": "🔧 Llantas Todo-Terreno de Rango Medio para Comodidad y Durabilidad",
+                            premium: "🌟 Llantas Premium para Máxima Eficiencia"
                         },
                         city: {
-                            economy: "Llantas Económicas para Tráfico Urbano",
-                            "mid-range": "Llantas Todo Clima de Rango Medio para Versatilidad",
-                            premium: "Llantas de Bajo Ruido Premium para Confort Urbano"
+                            economy: "🏙️ Llantas Económicas para Tráfico Urbano",
+                            "mid-range": "🔧 Llantas Todo-Terreno de Rango Medio para Versatilidad",
+                            premium: "🌟 Llantas Premium Silenciosas para Comodidad en la Ciudad"
                         },
                         "all-weather": {
-                            economy: "Llantas Económicas Todo Clima para Uso Diario",
-                            "mid-range": "Llantas Todo Clima de Rango Medio para Rendimiento Anual",
-                            premium: "Llantas Todo Clima Premium para Máxima Seguridad"
+                            economy: "❄️ Llantas Todo-Clima Económicas para Uso Diario",
+                            "mid-range": "🌤️ Llantas Todo-Clima de Rango Medio para Rendimiento Anual",
+                            premium: "☀️ Llantas Premium Todo-Terreno para Máxima Seguridad"
                         }
                     },
                     suv: {
                         "off-road": {
-                            economy: "Llantas Económicas para Terrenos Irregulares",
-                            "mid-range": "Llantas Todo Terreno de Rango Medio para Aventuras Ligeras",
-                            premium: "Llantas de Alto Rendimiento para Terrenos Difíciles"
+                            economy: "🌲 Llantas Económicas para Aventuras Ocasionales",
+                            "mid-range": "🛞 Llantas Todo-Terreno de Rango Medio para Senderos Moderados",
+                            premium: "🏔️ Llantas Premium para Senderos Rugosos"
                         },
                         highway: {
-                            economy: "Llantas Económicas para SUVs en Carretera",
-                            "mid-range": "Llantas Todo Clima para SUVs de Rango Medio",
-                            premium: "Llantas Silenciosas Premium para SUVs"
+                            economy: "🚙 Llantas Económicas para Rendimiento en Carreteras",
+                            "mid-range": "🔧 Llantas Todo-Terreno para SUVs",
+                            premium: "🌟 Llantas Premium Silenciosas para SUVs"
                         },
                         "all-weather": {
-                            economy: "Llantas Económicas Todo Clima para SUVs",
-                            "mid-range": "Llantas Todo Clima de Rango Medio para Uso Balanceado",
-                            premium: "Llantas de Alta Durabilidad para Todas las Condiciones"
+                            economy: "🌤️ Llantas Económicas Todo-Clima para SUVs",
+                            "mid-range": "🛞 Llantas Todo-Terreno de Rango Medio",
+                            premium: "❄️ Llantas Premium de Alta Durabilidad para Todas las Condiciones"
                         }
                     },
                     truck: {
                         highway: {
-                            economy: "Llantas Económicas para Cargas Ligeras",
-                            "mid-range": "Llantas de Rango Medio para Estabilidad",
-                            premium: "Llantas Premium para Máxima Eficiencia en Carretera"
+                            economy: "🚚 Llantas Económicas para Cargas Ligeras",
+                            "mid-range": "🔧 Llantas de Rango Medio para Estabilidad",
+                            premium: "🌟 Llantas Premium para Eficiencia en Carreteras"
                         },
                         "off-road": {
-                            economy: "Llantas Económicas para Uso Todo Terreno Ocasional",
-                            "mid-range": "Llantas Todo Terreno de Rango Medio para Rutas Frecuentes",
-                            premium: "Llantas Pesadas Todo Terreno de Alto Rendimiento"
+                            economy: "🌲 Llantas Rugosas Económicas para Todo Terreno",
+                            "mid-range": "🛞 Llantas Todo-Terreno de Rango Medio",
+                            premium: "🏔️ Llantas Premium Todo-Terreno de Alta Resistencia"
                         }
                     },
                     sports: {
                         highway: {
-                            economy: "Llantas Económicas de Rendimiento para Conducción Deportiva",
-                            "mid-range": "Llantas Deportivas de Rango Medio para Versatilidad",
-                            premium: "Llantas de Alto Rendimiento para Máxima Velocidad"
+                            economy: "🏎️ Llantas Económicas para Conducción Deportiva",
+                            "mid-range": "🔧 Llantas Deportivas de Rango Medio para Rendimiento Versátil",
+                            premium: "🌟 Llantas Racing Premium para Velocidad Máxima"
                         },
                         "all-weather": {
-                            economy: "Llantas Todo Clima de Rendimiento Económico",
-                            "mid-range": "Llantas Deportivas Todo Clima de Rango Medio",
-                            premium: "Llantas Premium Todo Clima para Alto Rendimiento"
-                        }
-                    },
-                    "off-road": {
-                        "off-road": {
-                            economy: "Llantas Económicas para Aventuras Todo Terreno",
-                            "mid-range": "Llantas Todo Terreno de Rango Medio para Rutas Versátiles",
-                            premium: "Llantas para Terrenos Extremos de Alto Rendimiento"
+                            economy: "🌤️ Llantas Económicas Todo-Clima de Rendimiento",
+                            "mid-range": "❄️ Llantas Deportivas Todo-Clima",
+                            premium: "☀️ Llantas Premium Todo-Terreno de Rendimiento Máximo"
                         }
                     }
                 };
 
                 const recommendation =
                     recommendations[vehicleType]?.[drivingCondition]?.[budget] ||
-                    "Por favor, selecciona opciones válidas para una recomendación.";
+                    "⚠️ Por favor selecciona opciones válidas para obtener una recomendación.";
 
-                document.getElementById('recommendation-result').innerText = recommendation;
+                result.innerHTML = recommendation;
+                modal.style.display = "block";
+            });
 
-                // Muestra el modal
-                document.getElementById('recommendation-modal').style.display = 'block';
+            closeButton.addEventListener("click", () => {
+                modal.style.display = "none";
             });
         });
-
-        function closeModal() {
-            document.getElementById('recommendation-modal').style.display = 'none';
-        }
     </script>
 </head>
 
 <body>
-    <!-- Sección de Encabezado -->
+    <!-- Header Section -->
     <header>
-        <h1 class="header-title">Tito's Tire Shop</h1>
+        <h1 class="header-title">🛞 Tito's Tire Shop 🚗</h1>
         <div class="title-banner">
-            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop - Oklahoma City">
+            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop - De confianza en Oklahoma City">
         </div>
     </header>
 
-    <!-- Navegación de Escritorio -->
+    <!-- Desktop Navigation -->
     <nav class="desktop-nav">
-        <a href="index_es.html">Inicio</a>
-        <a href="about_es.html">Sobre Nosotros</a>
-        <a href="services_es.html">Servicios</a>
-        <a href="gallery_es.html">Galería</a>
-        <a href="tire-recommendation_es.html" class="active">Tito's TreadMatch OKC</a>
-        <a href="contact_es.html">Contáctanos</a>
+        <a href="index_es.html">🏠 Inicio</a>
+        <a href="about_es.html">ℹ️ Sobre Nosotros</a>
+        <a href="services_es.html">🔧 Servicios</a>
+        <a href="gallery_es.html">🖼️ Galería</a>
+        <a href="tire-recommendation_es.html" class="active">🛞 TreadMatch OKC de Tito</a>
+        <a href="contact_es.html">📬 Contáctanos</a>
     </nav>
 
-    <!-- Sección Hero -->
-    <section class="offers-section">
-        <h1 class="offers-title">Tito's TreadMatch OKC</h1>
-        <p class="offers-description">Encuentra las llantas perfectas para tu vehículo en solo unos clics.</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>🔍 TreadMatch OKC de Tito 🚗</h1>
+        <p>🌟 Encuentra las llantas perfectas para tu vehículo con nuestra herramienta personalizada. 🛞</p>
     </section>
 
-    <!-- Herramienta de Recomendación de Llantas -->
-    <section class="offers-section">
-        <h2 class="offers-title">Recomendaciones Personalizadas de Llantas</h2>
+    <!-- Tire Recommendation Tool -->
+    <section class="tool-section">
+        <h2>✨ Recomendaciones Personalizadas de Llantas</h2>
         <form id="tire-form">
-            <label for="vehicle-type">Tipo de Vehículo:</label>
+            <label for="vehicle-type">🚘 Tipo de Vehículo:</label>
             <select id="vehicle-type" name="vehicle_type" required>
-                <option value="">Selecciona el Tipo de Vehículo</option>
-                <option value="sedan">Sedán</option>
-                <option value="suv">SUV</option>
-                <option value="truck">Camioneta</option>
-                <option value="sports">Auto Deportivo</option>
-                <option value="off-road">Todo Terreno</option>
+                <option value="">🔽 Selecciona el Tipo de Vehículo</option>
+                <option value="sedan">🚗 Sedán</option>
+                <option value="suv">🚙 SUV</option>
+                <option value="truck">🚚 Camión</option>
+                <option value="sports">🏎️ Auto Deportivo</option>
             </select>
 
-            <label for="driving-condition">Condiciones de Conducción:</label>
+            <label for="driving-condition">🌤️ Condiciones de Manejo:</label>
             <select id="driving-condition" name="driving_condition" required>
-                <option value="">Selecciona las Condiciones de Conducción</option>
-                <option value="highway">Carretera</option>
-                <option value="city">Ciudad</option>
-                <option value="off-road">Todo Terreno</option>
-                <option value="all-weather">Todo Clima</option>
+                <option value="">🔽 Selecciona las Condiciones de Manejo</option>
+                <option value="highway">🛣️ Carretera</option>
+                <option value="city">🏙️ Ciudad</option>
+                <option value="off-road">🌲 Todo Terreno</option>
+                <option value="all-weather">❄️ Todo Clima</option>
             </select>
 
-            <label for="budget">Rango de Presupuesto:</label>
+            <label for="budget">💵 Rango de Presupuesto:</label>
             <select id="budget" name="budget" required>
-                <option value="">Selecciona el Rango de Presupuesto</option>
-                <option value="economy">Económico</option>
-                <option value="mid-range">Intermedio</option>
-                <option value="premium">Premium</option>
+                <option value="">🔽 Selecciona el Rango de Presupuesto</option>
+                <option value="economy">💰 Económico</option>
+                <option value="mid-range">🔧 Rango Medio</option>
+                <option value="premium">🌟 Premium</option>
             </select>
 
-            <button type="submit" class="cta-button">Obtener Recomendaciones</button>
+            <button type="submit" class="cta-button">🔍 Obtener Recomendaciones</button>
         </form>
     </section>
 
-    <!-- Modal de Recomendaciones -->
+    <!-- Recommendation Modal -->
     <div id="recommendation-modal" class="modal">
         <div class="modal-content">
-            <h2>Tito's TreadMatchOKC</h2>
+            <h2>🛞 Tu Recomendación de Llantas</h2>
             <p id="recommendation-result"></p>
-            <button onclick="closeModal()" class="cta-button">Cerrar</button>
+            <button id="close-modal" class="cta-button">❌ Cerrar</button>
         </div>
     </div>
 
-    <!-- Pie de Página -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Tito's Tire Shop. Todos los derechos reservados.</p>
-		<address>
-        <p>
-            <strong>Dirección:</strong> 1305 Northwest 30th Street, Oklahoma City, OK 73118, EE. UU. <br>
-            <strong>Horario:</strong> Lun-Vie: 9 AM - 7 PM, Sáb: 9 AM - 6 PM, Dom: Cerrado
-        </p>
-		</address>
+        <p>&copy; 2025 Tito's Tire Shop. Creado con ❤️ en Oklahoma City 🌆. Excelencia Garantizada, Confiabilidad Local. 🛞</p>
+        <address>
+            <p>
+                📍 <strong>Dirección:</strong> 1305 Northwest 30th Street, Oklahoma City, OK 73118, EE.UU. <br>
+                ⏰ <strong>Horario:</strong> Lunes a Viernes: 9 AM - 7 PM, Sábado: 9 AM - 6 PM, Domingo: Cerrado
+            </p>
+        </address>
         <nav class="legal-links">
-            <a href="legal/terms_es.html">Términos y Condiciones</a>
-            <a href="legal/privacy_es.html">Política de Privacidad</a>
-            <a href="legal/disclaimer_es.html">Aviso Legal</a>
-            <a href="legal/warranty_es.html">Política de Garantía</a>
-            <a href="legal/refund_es.html">Política de Reembolso</a>
-            <a href="legal/accessibility_es.html">Declaración de Accesibilidad</a>
-            <a href="legal/cookies_es.html">Política de Cookies</a>
+            <a href="legal/terms_es.html">📜 Términos y Condiciones</a>
+            <a href="legal/privacy_es.html">🔒 Política de Privacidad</a>
+            <a href="legal/disclaimer_es.html">⚠️ Aviso Legal</a>
+            <a href="legal/warranty_es.html">📋 Política de Garantía</a>
+            <a href="legal/refund_es.html">💳 Política de Reembolsos</a>
+            <a href="legal/accessibility_es.html">♿ Declaración de Accesibilidad</a>
+            <a href="legal/cookies_es.html">🍪 Política de Cookies</a>
         </nav>
     </footer>
 </body>
