@@ -3,101 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tito's Tire Shop - Servicios y soluciones excepcionales de llantas en Oklahoma City. Descubra llantas nuevas y usadas, reparaciones y nuestra herramienta única de recomendación de llantas.">
-    <title>🏠 Inicio - Tito's Tire Shop</title>
+    <meta name="description" content="Programa tu cita en Tito's Tire Shop, ofreciendo servicios de calidad para llantas en Oklahoma City.">
+    <title>Agendar Cita | Tito's Tire Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-    <!-- Encabezado -->
+    <!-- Sección de Encabezado -->
     <header>
-        <h1 class="header-title">🚗 Tito's Tire Shop</h1>
+        <h1 class="header-title">🛞 Tito's Tire Shop 🚗</h1>
         <div class="title-banner">
-            <img src="assets/images/titos-banner.png" alt="Tito's Tire Shop - Expertos en llantas en Oklahoma City">
+            <img src="assets/images/tire-shop-banner.png" alt="Tito's Tire Shop - Servicios de calidad para llantas en OKC">
         </div>
     </header>
 
-    <!-- Navegación -->
+    <!-- Barra de Navegación -->
     <nav class="desktop-nav">
-        <a href="index_es.html" class="active">🏠 Inicio</a>
+        <a href="index_es.html">🏠 Inicio</a>
         <a href="about_es.html">ℹ️ Sobre Nosotros</a>
         <a href="services_es.html">🛠️ Servicios</a>
         <a href="gallery_es.html">📸 Galería</a>
-        <a href="tire-recommendation_es.html">🔍 Buscador de Llantas</a>
-        <a href="appointments_es.html">📅 Programar Cita</a>
+        <a href="tire-recommendation_es.html">🔍 Encuentra tus Llantas</a>
+        <a href="appointments_es.html" class="active">📅 Agendar Cita</a>
         <a href="view-appointments_es.html">👀 Ver Citas</a>
-        <a href="contact_es.html">📞 Contáctenos</a>
+        <a href="contact_es.html">📞 Contáctanos</a>
     </nav>
 
-    <!-- Sección Principal -->
+    <!-- Sección Hero -->
     <section class="hero-section">
-        <h1 class="hero-title">🌟 Bienvenido a Tito's Tire Shop 🌟</h1>
-        <p>
-            🚗 En <strong>Tito's Tire Shop</strong>, nos especializamos en ofrecer servicios de llantas premium, incluyendo 
-            <strong>venta de llantas nuevas y usadas</strong>, <strong>reparaciones profesionales</strong> y nuestra exclusiva 
-            herramienta <strong>Tito's TreadMatch OKC</strong> para recomendaciones personalizadas.
-        </p>
-        <p class="hero-address">
-            📍 Encuéntrenos en <strong>1305 Northwest 30th Street, Oklahoma City, OK 73118</strong>, ¡donde la calidad se encuentra con la accesibilidad!
-        </p>
-        <button class="cta-button" onclick="location.href='services_es.html'">🔧 Explorar Nuestros Servicios</button>
-        <button class="cta-button secondary" onclick="location.href='contact_es.html'">📞 Contáctenos Hoy</button>
+        <h1 class="hero-title">📅 Programa tu Cita para Servicio de Llantas 🚗</h1>
+        <blockquote class="hero-quote">
+            🛞 <em>"¡Cuidándote en el camino, una llanta a la vez!"</em> 🚗
+        </blockquote>
     </section>
 
-    <!-- Sección de Servicios -->
-    <section id="services" class="services-section">
-        <h2>🛠️ Nuestros Servicios</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <h3>🔧 Instalación de Llantas</h3>
-                <p>Instalación profesional de llantas nuevas y usadas para garantizar su seguridad en el camino. 🚗</p>
-            </div>
-            <div class="service-item">
-                <h3>⚙️ Reparación de Llantas</h3>
-                <p>Parches y tapones accesibles desde solo $7. Mantenemos su camino seguro. 💰</p>
-            </div>
-            <div class="service-item">
-                <h3>🚗 Balanceo de Llantas</h3>
-                <p>Balanceo y alineación precisos para una conducción más suave y eficiente. 🌟</p>
-            </div>
-            <div class="service-item">
-                <h3>🌟 Servicios de Frenos</h3>
-                <p>Mantenimiento y reparación integral de frenos para su seguridad. 🛑</p>
-            </div>
-        </div>
-        <br>
-        <button class="cta-button" onclick="location.href='services_es.html'">📖 Aprender Más</button>
-    </section>
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección de Citas -->
+        <section class="appointments-section">
+            <h2 class="section-title">📅 Programa tu Cita 🚀</h2>
+            <form class="appointment-form" id="appointmentForm">
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" placeholder="Juan Pérez" required maxlength="50">
+                </div>
 
-    <!-- Llamado a la Acción -->
-    <section class="cta-section">
-        <h2>🚀 ¿Por qué Elegir Tito's Tire Shop?</h2>
-        <p>Elegirnos significa priorizar la seguridad, calidad y satisfacción. 🛞</p>
-        <ul>
-            <li>✔️ <strong>Servicios Integrales:</strong> Desde ventas de llantas hasta reparaciones, lo tenemos cubierto.</li>
-            <li>💰 <strong>Precios Accesibles:</strong> Precios transparentes sin comprometer la calidad.</li>
-            <li>👨‍🔧 <strong>Técnicos Expertos:</strong> Cuidado profesional para todas sus necesidades de llantas.</li>
-            <li>🌟 <strong>Enfocados en la Comunidad:</strong> Dedicados a servir a Oklahoma City con un toque local.</li>
-        </ul>
-        <button class="cta-button" onclick="location.href='contact_es.html'">📞 Contáctenos</button>
-    </section>
+                <div class="form-group">
+                    <label for="phone">Número de Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointment_date">Fecha Preferida:</label>
+                    <input type="date" id="appointment_date" name="appointment_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointment_time">Hora Preferida:</label>
+                    <input type="time" id="appointment_time" name="appointment_time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Tipo de Servicio:</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Selecciona un servicio</option>
+                        <option value="tire-sales">Venta de Llantas</option>
+                        <option value="tire-repair">Reparación de Llantas</option>
+                        <option value="alignment">Alineación de Ruedas</option>
+                        <option value="brake-service">Servicio de Frenos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Detalles Adicionales:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Ingresa detalles adicionales..."></textarea>
+                </div>
+
+                <button type="submit" class="cta-button">Agendar Cita</button>
+                <p id="responseMessage"></p>
+            </form>
+        </section>
+    </main>
 
     <!-- Pie de Página -->
     <footer>
-        <p>&copy; 2025 Tito's Tire Shop. Todos los derechos reservados. 🌐</p>
-        <address>
-            <strong>📍 Dirección:</strong> 1305 Northwest 30th Street, Oklahoma City, OK 73118 <br>
-            <strong>⏰ Horario:</strong> Lunes-Viernes: 9 AM - 7 PM | Sábado: 9 AM - 6 PM | Domingo: Cerrado
-        </address>
+        <p>&copy; 2025 Tito's Tire Shop. 🌟 Hecho con ❤️ en Oklahoma City. Todos los derechos reservados.</p>
         <nav class="legal-links">
-            <a href="legal/terms_es.html">📜 Términos y Condiciones</a>
+            <a href="legal/terms_es.html">📝 Términos y Condiciones</a>
             <a href="legal/privacy_es.html">🔒 Política de Privacidad</a>
-            <a href="legal/disclaimer_es.html">⚠️ Descargo de Responsabilidad</a>
-            <a href="legal/warranty_es.html">🛡️ Garantía</a>
-            <a href="legal/refund_es.html">💳 Política de Reembolsos</a>
-            <a href="legal/accessibility_es.html">♿ Accesibilidad</a>
+            <a href="legal/disclaimer_es.html">⚠️ Aviso Legal</a>
+            <a href="legal/warranty_es.html">📜 Política de Garantía</a>
+            <a href="legal/refund_es.html">💵 Política de Reembolso</a>
+            <a href="legal/accessibility_es.html">♿ Declaración de Accesibilidad</a>
             <a href="legal/cookies_es.html">🍪 Política de Cookies</a>
         </nav>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
