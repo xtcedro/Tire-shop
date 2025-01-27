@@ -1,23 +1,6 @@
 
 
 
-.appointment-card .cta-button {
-    display: block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #FFA500; /* Orange button */
-    color: #FFFFFF; /* White text */
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.appointment-card .cta-button:hover {
-    background-color: #FF8C00; /* Darker orange on hover */
-    transform: scale(1.05); /* Slight zoom */
-}
 
 /* Base Styles for the Response Message */
 .response-message {
