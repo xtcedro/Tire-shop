@@ -2,38 +2,7 @@
 
 
 
-/* Base Styles for the Response Message */
-.response-message {
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 8px;
-    display: none; /* Initially hidden */
-    transition: all 0.3s ease-in-out; /* Smooth transition */
-}
 
-/* Success Message Styles */
-.response-message.success {
-    color: #FFFFFF; /* White text */
-    background-color: #FFA500; /* Orange background */
-    border: 2px solid #FFFFFF; /* White border */
-}
-
-/* Error Message Styles */
-.response-message.error {
-    color: #FFFFFF; /* White text */
-    background-color: #FF0000; /* Red background */
-    border: 2px solid #FFFFFF; /* White border */
-}
-
-/* Warning Message Styles (optional) */
-.response-message.warning {
-    color: #000000; /* Black text */
-    background-color: #FFC107; /* Light orange (warning) background */
-    border: 2px solid #FFFFFF; /* White border */
-}
 .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
